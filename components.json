@@ -1,0 +1,5675 @@
+{
+  "version": "3.0.19-cpp.26-beta.5",
+  "components": [
+    {
+      "name": "actionsheet",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "遮罩层可见"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": true,
+          "description": "设置列表面板副标题/描述"
+        },
+        {
+          "name": "options",
+          "type": "ActionSheetOption<string | boolean>[]",
+          "required": true,
+          "description": "列表项"
+        },
+        {
+          "name": "optionKey",
+          "type": "ActionSheetOption<string>",
+          "required": true,
+          "description": "列表项的自定义设置"
+        },
+        {
+          "name": "cancelText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "取消文案"
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "required": true,
+          "description": "点击取消文案时触发"
+        },
+        {
+          "name": "onSelect",
+          "type": "(item: ActionSheetOption<string | boolean>, index: number) => void",
+          "required": true,
+          "description": "选择之后触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/actionsheet"
+    },
+    {
+      "name": "address",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否打开地址选择"
+        },
+        {
+          "name": "defaultVisible",
+          "type": "boolean",
+          "required": true,
+          "description": "初始地址选择打开/关闭状态"
+        },
+        {
+          "name": "type",
+          "type": "AddressModeType",
+          "required": true,
+          "description": "地址选择类型 exist/cascader/elevator"
+        },
+        {
+          "name": "custom",
+          "type": "boolean | string",
+          "required": true,
+          "description": "是否可以切换自定义地址选择，type='exist' 时生效"
+        },
+        {
+          "name": "existList",
+          "type": "AddressList[]",
+          "required": true,
+          "description": "已存在地址列表，每个地址对象中，必传值provinceName、cityName、countyName、townName、addressDetail、selectedAddress（字段解释见下）"
+        },
+        {
+          "name": "defaultIcon",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "已有地址列表默认图标，type='exist' 时生效"
+        },
+        {
+          "name": "selectIcon",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "已有地址列表选中图标，type='exist' 时生效"
+        },
+        {
+          "name": "backIcon",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "自定义地址与已有地址切换时，自定义返回的按钮图标"
+        },
+        {
+          "name": "hotList",
+          "type": "RegionData[]",
+          "required": true,
+          "description": "是否展示热门城市，目前只在电梯模式下有效"
+        },
+        {
+          "name": "onSwitch",
+          "type": "(data: {",
+          "required": false,
+          "description": "点击'选择其他地址'或自定义地址选择左上角返回按钮触发"
+        },
+        {
+          "name": "onExistSelect",
+          "type": "(data: AddressList) => void",
+          "required": false,
+          "description": "选择已有地址列表时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/address"
+    },
+    {
+      "name": "animate",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "type",
+          "type": "AnimateType",
+          "required": true,
+          "description": "动画类型，见下方type值说明"
+        },
+        {
+          "name": "action",
+          "type": "AnimateAction",
+          "required": true,
+          "description": "触发方式，'initial'初始化执行; 'click'点击执行"
+        },
+        {
+          "name": "loop",
+          "type": "boolean",
+          "required": true,
+          "description": "是否循环执行。true循环执行;false执行一次"
+        },
+        {
+          "name": "onClick",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "点击元素时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/animate"
+    },
+    {
+      "name": "animatingnumbers",
+      "category": "数据展示",
+      "props": [],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/animatingnumbers"
+    },
+    {
+      "name": "audio",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "required": true,
+          "description": "语音资源链接"
+        },
+        {
+          "name": "muted",
+          "type": "boolean",
+          "required": true,
+          "description": "是否静音"
+        },
+        {
+          "name": "autoPlay",
+          "type": "boolean",
+          "required": true,
+          "description": "是否自动播放"
+        },
+        {
+          "name": "loop",
+          "type": "boolean",
+          "required": true,
+          "description": "是否循环播放"
+        },
+        {
+          "name": "preload",
+          "type": "string",
+          "required": true,
+          "description": "是否预加载语音"
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "required": true,
+          "description": "展示形式，可选值：controls 控制面板 progress 进度条 icon 图标 none 自定义"
+        },
+        {
+          "name": "onForward",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "语音快进回调,type=progress时生效"
+        },
+        {
+          "name": "onPause",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "暂停回调"
+        },
+        {
+          "name": "onMute",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "静音回调"
+        },
+        {
+          "name": "onCanPlay",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "可以播放媒体时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/audio"
+    },
+    {
+      "name": "avatar",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "size",
+          "type": "string",
+          "required": true,
+          "description": "设置头像的大小"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "设置 Icon 类型头像图标"
+        },
+        {
+          "name": "shape",
+          "type": "UIRound",
+          "required": true,
+          "description": "设置头像的形状"
+        },
+        {
+          "name": "background",
+          "type": "string",
+          "required": true,
+          "description": "设置 Icon、字符类型头像的背景色"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": true,
+          "description": "设置 Icon、字符类型头像的颜色"
+        },
+        {
+          "name": "src",
+          "type": "string",
+          "required": true,
+          "description": "设置图片类型头像的地址"
+        },
+        {
+          "name": "onClick",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击头像触发事件"
+        },
+        {
+          "name": "onError",
+          "type": "() => void",
+          "required": true,
+          "description": "图片加载失败的事件"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/avatar"
+    },
+    {
+      "name": "avatarcropper",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "maxZoom",
+          "type": "number",
+          "required": true,
+          "description": "最大缩放倍数"
+        },
+        {
+          "name": "space",
+          "type": "number",
+          "required": true,
+          "description": "裁剪区域两边预留的间隙"
+        },
+        {
+          "name": "toolbar",
+          "type": "ReactNode[]",
+          "required": true,
+          "description": "自定义裁剪区域工具栏"
+        },
+        {
+          "name": "toolbarPosition",
+          "type": "PositionY",
+          "required": true,
+          "description": "裁剪区域工具栏位置,可选值为：top bottom"
+        },
+        {
+          "name": "editText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "中间的文字内容"
+        },
+        {
+          "name": "shape",
+          "type": "UIRound",
+          "required": true,
+          "description": "裁剪形状,可选值为：square round"
+        },
+        {
+          "name": "onConfirm",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "裁剪后点击确认触发"
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "required": true,
+          "description": "点击取消触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/avatarcropper"
+    },
+    {
+      "name": "backtop",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "zIndex",
+          "type": "number",
+          "required": true,
+          "description": "设置组件页面层级"
+        },
+        {
+          "name": "threshold",
+          "type": "number",
+          "required": true,
+          "description": "页面垂直滚动多高后出现"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "required": true,
+          "description": "设置动画持续时间，为 0 时表示无动画"
+        },
+        {
+          "name": "onClick",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "按钮点击时触发事件"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/backtop"
+    },
+    {
+      "name": "badge",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "value",
+          "type": "ReactNode",
+          "required": true,
+          "description": "显示的内容，支持数字、字符和自定义内容"
+        },
+        {
+          "name": "dot",
+          "type": "boolean",
+          "required": true,
+          "description": "是否为小点，当value值为自定义内容时，dot不生效"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "required": true,
+          "description": "value 为数值时，最大值"
+        },
+        {
+          "name": "top",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "上下偏移量，可设置为：\"0\"或0 等"
+        },
+        {
+          "name": "right",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "左右偏移量，可设置为：\"0\"或0 等"
+        },
+        {
+          "name": "fill",
+          "type": "BadgeFill",
+          "required": true,
+          "description": "填充模式"
+        },
+        {
+          "name": "size",
+          "type": "BadgeDotSize",
+          "required": true,
+          "description": "dot 尺寸，当 dot 等于 true 时生效"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/badge"
+    },
+    {
+      "name": "barrage",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "list",
+          "type": "Array<string>",
+          "required": true,
+          "description": "弹幕列表数据"
+        },
+        {
+          "name": "interval",
+          "type": "number",
+          "required": true,
+          "description": "可视区域内每个弹幕出现的时间间隔"
+        },
+        {
+          "name": "loop",
+          "type": "boolean",
+          "required": true,
+          "description": "是否循环播放"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "required": true,
+          "description": "每个弹幕的滚动时间"
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "required": true,
+          "description": "弹幕行数，分几行展示"
+        },
+        {
+          "name": "gapY",
+          "type": "number",
+          "required": true,
+          "description": "弹幕垂直距离"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/barrage"
+    },
+    {
+      "name": "button",
+      "category": "基础组件",
+      "props": [
+        {
+          "name": "color",
+          "type": "string",
+          "required": true,
+          "description": "按钮颜色，支持传入 linear-gradient 渐变色, outline 和 dashed 模式下设置的是 color，其他情况设置的是background，建议使用CSS变量实现的颜色配置"
+        },
+        {
+          "name": "shape",
+          "type": "UIRound",
+          "required": true,
+          "description": "按钮的形状"
+        },
+        {
+          "name": "type",
+          "type": "UIType",
+          "required": true,
+          "description": "按钮的样式"
+        },
+        {
+          "name": "size",
+          "type": "UISize",
+          "required": true,
+          "description": "按钮的尺寸"
+        },
+        {
+          "name": "fill",
+          "type": "UIFill",
+          "required": true,
+          "description": "填充模式"
+        },
+        {
+          "name": "block",
+          "type": "boolean",
+          "required": true,
+          "description": "是否为块级元素"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "required": true,
+          "description": "按钮loading状态"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用按钮"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "按钮图标"
+        },
+        {
+          "name": "rightIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "右侧按钮图标"
+        },
+        {
+          "name": "nativeType",
+          "type": "'submit' | 'reset' | 'button'",
+          "required": true,
+          "description": "按钮原始类型"
+        },
+        {
+          "name": "onClick",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击按钮时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/button"
+    },
+    {
+      "name": "calendar",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "type",
+          "type": "CalendarType",
+          "required": true,
+          "description": "类型，日期选择'single'，区间选择'range'"
+        },
+        {
+          "name": "autoBackfill",
+          "type": "boolean",
+          "required": true,
+          "description": "自动回填"
+        },
+        {
+          "name": "popup",
+          "type": "boolean",
+          "required": true,
+          "description": "是否弹窗状态展示"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否可见"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "description": "显示标题"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string | string[]",
+          "required": true,
+          "description": "默认值，日期选择 string 格式，区间选择 Array 格式"
+        },
+        {
+          "name": "startDate",
+          "type": "string",
+          "required": true,
+          "description": "开始日期， 如果不限制开始日期传 null"
+        },
+        {
+          "name": "endDate",
+          "type": "string",
+          "required": true,
+          "description": "结束日期，如果不限制结束日期传 null"
+        },
+        {
+          "name": "showToday",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示今天标记"
+        },
+        {
+          "name": "startText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "范围选择，开始信息文案"
+        },
+        {
+          "name": "endText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "范围选择，结束信息文案"
+        },
+        {
+          "name": "confirmText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "底部确认按钮文案"
+        },
+        {
+          "name": "showTitle",
+          "type": "boolean",
+          "required": true,
+          "description": "是否在展示日历标题"
+        },
+        {
+          "name": "showSubTitle",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示日期标题"
+        },
+        {
+          "name": "scrollAnimation",
+          "type": "boolean",
+          "required": true,
+          "description": "是否启动滚动动画"
+        },
+        {
+          "name": "firstDayOfWeek",
+          "type": "number",
+          "required": true,
+          "description": "设置周起始日"
+        },
+        {
+          "name": "closeIcon",
+          "type": "ReactNode",
+          "required": false,
+          "description": "自定义 Icon"
+        },
+        {
+          "name": "disableDate",
+          "type": "(date: CalendarDay) => boolean",
+          "required": true,
+          "description": "设置不可选日期"
+        },
+        {
+          "name": "renderHeaderButtons",
+          "type": "() => string | JSX.Element",
+          "required": false,
+          "description": "自定义日历标题下部，可用以添加自定义操作"
+        },
+        {
+          "name": "renderBottomButton",
+          "type": "() => string | JSX.Element",
+          "required": false,
+          "description": "自定义日历底部按钮"
+        },
+        {
+          "name": "renderDay",
+          "type": "(date: CalendarDay) => string | JSX.Element",
+          "required": false,
+          "description": "日期信息"
+        },
+        {
+          "name": "renderDayTop",
+          "type": "(date: CalendarDay) => string | JSX.Element",
+          "required": false,
+          "description": "日期顶部信息"
+        },
+        {
+          "name": "renderDayBottom",
+          "type": "(date: CalendarDay) => string | JSX.Element",
+          "required": false,
+          "description": "日期底部信息"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "关闭时触发"
+        },
+        {
+          "name": "onConfirm",
+          "type": "(param: string) => void",
+          "required": true,
+          "description": "选择之后或是点击确认按钮触发"
+        },
+        {
+          "name": "onDayClick",
+          "type": "(data: string[]) => void",
+          "required": true,
+          "description": "点击/选择后触发"
+        },
+        {
+          "name": "onPageChange",
+          "type": "(param: string) => void",
+          "required": true,
+          "description": "年月子标题到达顶部时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/calendar"
+    },
+    {
+      "name": "calendarcard",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "type",
+          "type": "'single' | 'multiple' | 'range' | 'week'",
+          "required": true,
+          "description": "类型，单个日期 single，多个日期 multiple，日期范围 range，周选择 week"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义标题"
+        },
+        {
+          "name": "value",
+          "type": "CalendarCardValue",
+          "required": true,
+          "description": "受控模式下的值，与 onChange 搭配使用"
+        },
+        {
+          "name": "defaultValue",
+          "type": "CalendarCardValue",
+          "required": true,
+          "description": "默认值，单个日期 Date 格式，多个日期/范围选择 Date[] 格式"
+        },
+        {
+          "name": "firstDayOfWeek",
+          "type": "number",
+          "required": true,
+          "description": "设置周起始日，0 为周日，1 为周一"
+        },
+        {
+          "name": "startDate",
+          "type": "Date",
+          "required": true,
+          "description": "限制范围开始日期"
+        },
+        {
+          "name": "endDate",
+          "type": "Date",
+          "required": true,
+          "description": "限制范围结束日期"
+        },
+        {
+          "name": "disableDay",
+          "type": "(day: CalendarCardDay) => boolean",
+          "required": true,
+          "description": "设置不可选日期"
+        },
+        {
+          "name": "renderDay",
+          "type": "(day: CalendarCardDay) => ReactNode",
+          "required": true,
+          "description": "日期信息"
+        },
+        {
+          "name": "renderDayTop",
+          "type": "(day: CalendarCardDay) => ReactNode",
+          "required": true,
+          "description": "日期顶部信息"
+        },
+        {
+          "name": "renderDayBottom",
+          "type": "(day: CalendarCardDay) => ReactNode",
+          "required": true,
+          "description": "日期底部信息"
+        },
+        {
+          "name": "onDayClick",
+          "type": "(day: CalendarCardDay) => void",
+          "required": true,
+          "description": "点击后触发"
+        },
+        {
+          "name": "onPageChange",
+          "type": "(data: CalendarCardMonth) => void",
+          "required": true,
+          "description": "切换月份时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: CalendarCardValue) => void",
+          "required": true,
+          "description": "选择值发生变化时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/calendarcard"
+    },
+    {
+      "name": "card",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "required": true,
+          "description": "左侧图片 Url"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "description": "标题"
+        },
+        {
+          "name": "price",
+          "type": "string",
+          "required": true,
+          "description": "商品价格"
+        },
+        {
+          "name": "vipPrice",
+          "type": "string",
+          "required": true,
+          "description": "会员价格"
+        },
+        {
+          "name": "shopDescription",
+          "type": "string",
+          "required": true,
+          "description": "店铺介绍"
+        },
+        {
+          "name": "delivery",
+          "type": "string",
+          "required": true,
+          "description": "配送方式"
+        },
+        {
+          "name": "shopName",
+          "type": "string",
+          "required": true,
+          "description": "店铺名称"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义商品介绍"
+        },
+        {
+          "name": "tag",
+          "type": "ReactNode",
+          "required": true,
+          "description": "店铺介绍自定义"
+        },
+        {
+          "name": "priceTag",
+          "type": "ReactNode",
+          "required": true,
+          "description": "价格后方自定义内容"
+        },
+        {
+          "name": "extra",
+          "type": "ReactNode",
+          "required": true,
+          "description": "右下角内容自定义"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/card"
+    },
+    {
+      "name": "cascader",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "popup",
+          "type": "boolean",
+          "required": true,
+          "description": "是否弹窗状态展示"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "级联显示隐藏状态"
+        },
+        {
+          "name": "activeColor",
+          "type": "string",
+          "required": true,
+          "description": "选中激活颜色"
+        },
+        {
+          "name": "activeIcon",
+          "type": "string",
+          "required": true,
+          "description": "标记选中的Icon"
+        },
+        {
+          "name": "options",
+          "type": "CascaderOption[]",
+          "required": true,
+          "description": "级联数据"
+        },
+        {
+          "name": "value",
+          "type": "CascaderValue",
+          "required": false,
+          "description": "选中值，受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "CascaderValue",
+          "required": false,
+          "description": "默认选中值"
+        },
+        {
+          "name": "optionKey",
+          "type": "CascaderOptionKey",
+          "required": true,
+          "description": "自定义options中的关键字，valueKey、textKey、childrenKey"
+        },
+        {
+          "name": "format",
+          "type": "Record<string, string | number | null>",
+          "required": true,
+          "description": "当options为可转换为树形结构的扁平结构时，配置转换规则"
+        },
+        {
+          "name": "closeable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示关闭按钮，继承 Popup 组件"
+        },
+        {
+          "name": "closeIconPosition",
+          "type": "PopupCloseIconPosition",
+          "required": true,
+          "description": "取消按钮位置，继承 Popup 组件"
+        },
+        {
+          "name": "closeIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义关闭按钮，继承 Popup 组件"
+        },
+        {
+          "name": "lazy",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启动态加载"
+        },
+        {
+          "name": "onLoad",
+          "type": "(node: CascaderOption, levelIndex: number) => Promise<CascaderOption[]>",
+          "required": true,
+          "description": "动态加载回调，开启动态加载时生效"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: CascaderValue, pathNodes: CascaderOption[]) => void",
+          "required": true,
+          "description": "选中值改变时触发"
+        },
+        {
+          "name": "onPathChange",
+          "type": "(value: CascaderValue, pathNodes: CascaderOption[]) => void",
+          "required": true,
+          "description": "选中项改变时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/cascader"
+    },
+    {
+      "name": "cell",
+      "category": "基础组件",
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "description": "标题"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": true,
+          "description": "描述"
+        },
+        {
+          "name": "extra",
+          "type": "ReactNode",
+          "required": true,
+          "description": "右侧描述"
+        },
+        {
+          "name": "radius",
+          "type": "string | number",
+          "required": true,
+          "description": "圆角半径"
+        },
+        {
+          "name": "align",
+          "type": "FlexAlign",
+          "required": true,
+          "description": "纵轴方向上的对齐方式"
+        },
+        {
+          "name": "clickable",
+          "type": "boolean",
+          "required": true,
+          "description": "点击的样式反馈"
+        },
+        {
+          "name": "onClick",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "点击事件"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/cell"
+    },
+    {
+      "name": "checkbox",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": true,
+          "description": "是否选中"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用选择"
+        },
+        {
+          "name": "defaultChecked",
+          "type": "boolean",
+          "required": true,
+          "description": "初始是否选中"
+        },
+        {
+          "name": "shape",
+          "type": "CheckboxShape",
+          "required": true,
+          "description": "形状"
+        },
+        {
+          "name": "labelPosition",
+          "type": "PositionX",
+          "required": true,
+          "description": "文本所在的位置"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "选中前"
+        },
+        {
+          "name": "activeIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "选中后"
+        },
+        {
+          "name": "indeterminateIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "半选状态"
+        },
+        {
+          "name": "value",
+          "type": "string | number",
+          "required": true,
+          "description": "标识值，用于 Group 模式"
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "required": true,
+          "description": "复选框的文本内容"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: boolean) => void",
+          "required": true,
+          "description": "值变化时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/checkbox"
+    },
+    {
+      "name": "circleprogress",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "percent",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "百分比"
+        },
+        {
+          "name": "strokeWidth",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "圆弧的宽度"
+        },
+        {
+          "name": "radius",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "半径"
+        },
+        {
+          "name": "strokeLinecap",
+          "type": "'butt' | 'round' | 'square' | 'inherit'",
+          "required": true,
+          "description": "圆环进度条端点形状"
+        },
+        {
+          "name": "color",
+          "type": "Record<string, string> | string",
+          "required": true,
+          "description": "圆环进度条颜色，传入对象格式可以定义渐变色"
+        },
+        {
+          "name": "background",
+          "type": "string",
+          "required": true,
+          "description": "圆环轨道颜色"
+        },
+        {
+          "name": "clockwise",
+          "type": "boolean",
+          "required": true,
+          "description": "是否顺时针展示"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/circleprogress"
+    },
+    {
+      "name": "collapse",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "activeName",
+          "type": "CollapseActiveName",
+          "required": true,
+          "description": "当前展开面板的 name，受控"
+        },
+        {
+          "name": "defaultActiveName",
+          "type": "CollapseActiveName",
+          "required": true,
+          "description": "默认展开面板的 name，非受控"
+        },
+        {
+          "name": "accordion",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启手风琴模式"
+        },
+        {
+          "name": "expandIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义展开图标"
+        },
+        {
+          "name": "rotate",
+          "type": "number",
+          "required": true,
+          "description": "点击折叠和展开的旋转角度,在自定义图标模式下生效"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/collapse"
+    },
+    {
+      "name": "configprovider",
+      "category": "基础组件",
+      "props": [],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/configprovider"
+    },
+    {
+      "name": "countdown",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "type",
+          "type": "CountDownType",
+          "required": true,
+          "description": "展示类型"
+        },
+        {
+          "name": "paused",
+          "type": "boolean",
+          "required": true,
+          "description": "是否暂停"
+        },
+        {
+          "name": "startTime",
+          "type": "number",
+          "required": true,
+          "description": "开始时间"
+        },
+        {
+          "name": "endTime",
+          "type": "number",
+          "required": true,
+          "description": "结束时间"
+        },
+        {
+          "name": "remainingTime",
+          "type": "number",
+          "required": true,
+          "description": "剩余时间，单位是毫秒"
+        },
+        {
+          "name": "millisecond",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启毫秒级渲染"
+        },
+        {
+          "name": "format",
+          "type": "string",
+          "required": true,
+          "description": "时间格式"
+        },
+        {
+          "name": "autoStart",
+          "type": "boolean",
+          "required": true,
+          "description": "是否自动开始倒计时"
+        },
+        {
+          "name": "time",
+          "type": "number",
+          "required": true,
+          "description": "倒计时显示时间，单位是毫秒。autoStart 为 false 时生效"
+        },
+        {
+          "name": "destroy",
+          "type": "boolean",
+          "required": true,
+          "description": "销毁实例"
+        },
+        {
+          "name": "onEnd",
+          "type": "() => void",
+          "required": true,
+          "description": "倒计时结束时回调函数"
+        },
+        {
+          "name": "onPaused",
+          "type": "(restTime: number) => void",
+          "required": true,
+          "description": "暂停倒计时回调函数"
+        },
+        {
+          "name": "onRestart",
+          "type": "(restTime: number) => void",
+          "required": true,
+          "description": "重新开始倒计时回调函数"
+        },
+        {
+          "name": "onUpdate",
+          "type": "(restTime: string | CountDownTime) => void",
+          "required": true,
+          "description": "自定义展示内容时，实时更新倒计时数据回调函数"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/countdown"
+    },
+    {
+      "name": "datepicker",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "value",
+          "type": "Date",
+          "required": false,
+          "description": "受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "Date",
+          "required": false,
+          "description": "初始值"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否可见"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "description": "设置标题"
+        },
+        {
+          "name": "type",
+          "type": "'date' | 'time' | 'year-month' | 'month-day' | 'datehour' | 'datetime' | 'hour-minutes' | ''",
+          "required": true,
+          "description": "类时间类型，可选值 date time year-month month-day datehour datetime hour-minutes"
+        },
+        {
+          "name": "showChinese",
+          "type": "boolean",
+          "required": true,
+          "description": "每列是否展示中文"
+        },
+        {
+          "name": "minuteStep",
+          "type": "number",
+          "required": true,
+          "description": "分钟步进值"
+        },
+        {
+          "name": "startDate",
+          "type": "Date",
+          "required": true,
+          "description": "开始日期"
+        },
+        {
+          "name": "endDate",
+          "type": "Date",
+          "required": true,
+          "description": "结束日期"
+        },
+        {
+          "name": "threeDimensional",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启3D效果"
+        },
+        {
+          "name": "pickerProps",
+          "type": "Partial<Omit<BasePicker, 'defaultValue' | 'threeDimensional' | 'title' | 'value' | 'onConfirm' | 'onClose' | 'onCancel' | 'onChange'>>",
+          "required": true,
+          "description": "透传picker属性"
+        },
+        {
+          "name": "formatter",
+          "type": "(type: string, option: PickerOption) => PickerOption",
+          "required": true,
+          "description": "选项格式化函数"
+        },
+        {
+          "name": "filter",
+          "type": "(type: string, options: PickerOptions) => PickerOptions",
+          "required": true,
+          "description": "选项过滤函数"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "确定和取消时，都触发"
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "required": true,
+          "description": "点击取消按钮时触发"
+        },
+        {
+          "name": "onConfirm",
+          "type": "(selectedOptions: PickerOptions, selectedValue: PickerValue[]) => void",
+          "required": true,
+          "description": "点击确定按钮时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(selectedOptions: PickerOptions, selectedValue: PickerValue[], columnIndex: number) => void",
+          "required": false,
+          "description": "选项改变时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/datepicker"
+    },
+    {
+      "name": "datepickerview",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "value",
+          "type": "Date",
+          "required": false,
+          "description": "受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "Date",
+          "required": false,
+          "description": "初始值"
+        },
+        {
+          "name": "type",
+          "type": "'date' | 'time' | 'year-month' | 'month-day' | 'datehour' | 'datetime' | 'hour-minutes'",
+          "required": true,
+          "description": "类时间类型，可选值 date time year-month month-day datehour datetime hour-minutes"
+        },
+        {
+          "name": "showChinese",
+          "type": "boolean",
+          "required": true,
+          "description": "每列是否展示中文"
+        },
+        {
+          "name": "minuteStep",
+          "type": "number",
+          "required": true,
+          "description": "分钟步进值"
+        },
+        {
+          "name": "startDate",
+          "type": "Date",
+          "required": true,
+          "description": "开始日期"
+        },
+        {
+          "name": "endDate",
+          "type": "Date",
+          "required": true,
+          "description": "结束日期"
+        },
+        {
+          "name": "threeDimensional",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启3D效果"
+        },
+        {
+          "name": "formatter",
+          "type": "(type: string, option: PickerOption) => PickerOption",
+          "required": true,
+          "description": "选项格式化函数"
+        },
+        {
+          "name": "filter",
+          "type": "(type: string, options: PickerOptions) => PickerOptions",
+          "required": true,
+          "description": "选项过滤函数"
+        },
+        {
+          "name": "onChange",
+          "type": "(selectedOptions: PickerOptions, selectedValue: PickerValue[], columnIndex: number) => void",
+          "required": true,
+          "description": "选项改变时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/datepickerview"
+    },
+    {
+      "name": "dialog",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "content",
+          "type": "ReactNode",
+          "required": true,
+          "description": "对话框的内容，适用于函数式调用"
+        },
+        {
+          "name": "confirmText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "确认按钮文案"
+        },
+        {
+          "name": "cancelText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "取消按钮文案"
+        },
+        {
+          "name": "hideConfirmButton",
+          "type": "boolean",
+          "required": true,
+          "description": "是否隐藏确定按钮"
+        },
+        {
+          "name": "hideCancelButton",
+          "type": "boolean",
+          "required": true,
+          "description": "是否隐藏取消按钮"
+        },
+        {
+          "name": "disableConfirmButton",
+          "type": "boolean",
+          "required": true,
+          "description": "禁用确定按钮"
+        },
+        {
+          "name": "closeIconPosition",
+          "type": "DialogCloseIconPosition",
+          "required": true,
+          "description": "关闭按钮位置"
+        },
+        {
+          "name": "closeIcon",
+          "type": "boolean | ReactNode",
+          "required": true,
+          "description": "关闭按钮"
+        },
+        {
+          "name": "beforeClose",
+          "type": "() => boolean",
+          "required": true,
+          "description": "关闭前回调"
+        },
+        {
+          "name": "beforeCancel",
+          "type": "() => boolean",
+          "required": true,
+          "description": "取消前回调，点击取消时触发"
+        },
+        {
+          "name": "onConfirm",
+          "type": "(e?: MouseEvent<HTMLButtonElement>) => PromiseLike<any> | void",
+          "required": true,
+          "description": "确定按钮回调"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/dialog"
+    },
+    {
+      "name": "divider",
+      "category": "布局组件",
+      "props": [
+        {
+          "name": "contentPosition",
+          "type": "Align",
+          "required": true,
+          "description": "内容位置"
+        },
+        {
+          "name": "direction",
+          "type": "Direction",
+          "required": false,
+          "description": "水平还是垂直类型"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/divider"
+    },
+    {
+      "name": "drag",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "attract",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启自动吸边"
+        },
+        {
+          "name": "direction",
+          "type": "'x' | 'y' | 'lock' | undefined",
+          "required": true,
+          "description": "拖拽元素的拖拽方向限制"
+        },
+        {
+          "name": "boundary",
+          "type": "{",
+          "required": true,
+          "description": "拖拽元素的拖拽边界"
+        },
+        {
+          "name": "onDragStart",
+          "type": "() => void",
+          "required": true,
+          "description": "开始拖拽元素"
+        },
+        {
+          "name": "onDragEnd",
+          "type": "(state: DragState) => void",
+          "required": true,
+          "description": "停止拖拽元素"
+        },
+        {
+          "name": "onDrag",
+          "type": "(state: DragState) => void",
+          "required": true,
+          "description": "拖拽元素"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/drag"
+    },
+    {
+      "name": "elevator",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "defaultValue",
+          "type": "ElevatorItem",
+          "required": false,
+          "description": "默认选中的值，受控"
+        },
+        {
+          "name": "value",
+          "type": "ElevatorItem",
+          "required": false,
+          "description": "当前选中的值"
+        },
+        {
+          "name": "mode",
+          "type": "ElevatorMode",
+          "required": true,
+          "description": "电梯结构展示模式"
+        },
+        {
+          "name": "height",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "电梯区域的高度"
+        },
+        {
+          "name": "floorKey",
+          "type": "ElevatorFloorKey",
+          "required": true,
+          "description": "索引 key 值"
+        },
+        {
+          "name": "list",
+          "type": "ElevatorList[]",
+          "required": true,
+          "description": "索引列表"
+        },
+        {
+          "name": "sticky",
+          "type": "boolean",
+          "required": true,
+          "description": "索引是否吸顶"
+        },
+        {
+          "name": "spaceHeight",
+          "type": "number",
+          "required": true,
+          "description": "右侧锚点的上下间距"
+        },
+        {
+          "name": "showKeys",
+          "type": "boolean",
+          "required": true,
+          "description": "展示右侧导航"
+        },
+        {
+          "name": "onItemClick",
+          "type": "(key: string, item: ElevatorItem) => void",
+          "required": true,
+          "description": "点击内容"
+        },
+        {
+          "name": "onIndexClick",
+          "type": "(key: string) => void",
+          "required": true,
+          "description": "点击索引"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/elevator"
+    },
+    {
+      "name": "ellipsis",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "content",
+          "type": "string",
+          "required": true,
+          "description": "文本内容"
+        },
+        {
+          "name": "direction",
+          "type": "EllipsisDirection",
+          "required": true,
+          "description": "省略位置"
+        },
+        {
+          "name": "rows",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "展示几行"
+        },
+        {
+          "name": "expandText",
+          "type": "string",
+          "required": true,
+          "description": "展开操作的文案"
+        },
+        {
+          "name": "collapseText",
+          "type": "string",
+          "required": true,
+          "description": "收起操作的文案"
+        },
+        {
+          "name": "symbol",
+          "type": "string",
+          "required": true,
+          "description": "省略的符号"
+        },
+        {
+          "name": "lineHeight",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "容器的行高"
+        },
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "required": false,
+          "description": "文本点击时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(type: EllipsisState) => void",
+          "required": false,
+          "description": "点击展开收起时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/ellipsis"
+    },
+    {
+      "name": "empty",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "image",
+          "type": "ReactNode",
+          "required": true,
+          "description": "图片,支持传入图片 URL"
+        },
+        {
+          "name": "imageSize",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "图片大小，number 类型单位为 px"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "description": "图片下方的标题"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": true,
+          "description": "图片下方的描述文字"
+        },
+        {
+          "name": "size",
+          "type": "Extract<UISize, 'small' | 'base'>",
+          "required": true,
+          "description": "组件整体大小，适配于全屏或半屏"
+        },
+        {
+          "name": "status",
+          "type": "EmptyState",
+          "required": true,
+          "description": "默认图片错误类型"
+        },
+        {
+          "name": "actions",
+          "type": "Array<EmptyAction>",
+          "required": true,
+          "description": "可用于处理操作的一组数据"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/empty"
+    },
+    {
+      "name": "fixednav",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "overlay",
+          "type": "boolean",
+          "required": true,
+          "description": "展开时是否显示遮罩"
+        },
+        {
+          "name": "activeText",
+          "type": "string",
+          "required": true,
+          "description": "收起列表按钮文案"
+        },
+        {
+          "name": "inactiveText",
+          "type": "string",
+          "required": true,
+          "description": "展开列表按钮文案"
+        },
+        {
+          "name": "position",
+          "type": "FixedNavPosition",
+          "required": true,
+          "description": "fixed 垂直位置"
+        },
+        {
+          "name": "type",
+          "type": "PositionX",
+          "required": true,
+          "description": "导航方向"
+        },
+        {
+          "name": "content",
+          "type": "ReactNode",
+          "required": false,
+          "description": "自定义按钮"
+        },
+        {
+          "name": "list",
+          "type": "Array<FixedNavItem>",
+          "required": true,
+          "description": "悬浮列表内容数据"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: boolean) => void",
+          "required": true,
+          "description": "展开收起按钮回调"
+        },
+        {
+          "name": "onSelect",
+          "type": "(item: FixedNavItem, event: any) => void",
+          "required": true,
+          "description": "选择之后触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/fixednav"
+    },
+    {
+      "name": "form",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "footer",
+          "type": "ReactNode",
+          "required": true,
+          "description": "表单底部区域，一般放置确认和重置按钮"
+        },
+        {
+          "name": "initialValues",
+          "type": "any",
+          "required": true,
+          "description": "表单初始值"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "表单名称"
+        },
+        {
+          "name": "form",
+          "type": "any",
+          "required": true,
+          "description": "经 Form.useForm() 创建的 form 控制实例，不提供时会自动创建"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用"
+        },
+        {
+          "name": "validateTrigger",
+          "type": "string | string[] | false",
+          "required": true,
+          "description": "统一设置字段触发验证的时机"
+        },
+        {
+          "name": "labelPosition",
+          "type": "'top' | 'left' | 'right'",
+          "required": true,
+          "description": "表单项 label 的位置"
+        },
+        {
+          "name": "starPosition",
+          "type": "'left' | 'right'",
+          "required": true,
+          "description": "必填表单项 label 的红色星标位置"
+        },
+        {
+          "name": "onFinish",
+          "type": "(values: any) => void",
+          "required": true,
+          "description": "校验成功后触发"
+        },
+        {
+          "name": "onFinishFailed",
+          "type": "(values: any, errorFields: any) => void",
+          "required": true,
+          "description": "任一表单项被校验失败后触发"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "字段名"
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "required": true,
+          "description": "label 标签的文本"
+        },
+        {
+          "name": "rules",
+          "type": "FormItemRule[]",
+          "required": true,
+          "description": "校验规则，设置字段的校验逻辑"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用表单项"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/form"
+    },
+    {
+      "name": "grid",
+      "category": "布局组件",
+      "props": [
+        {
+          "name": "columns",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "列数"
+        },
+        {
+          "name": "gap",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "格子之间的间距，默认单位为px"
+        },
+        {
+          "name": "center",
+          "type": "boolean",
+          "required": true,
+          "description": "是否将格子内容居中显示"
+        },
+        {
+          "name": "square",
+          "type": "boolean",
+          "required": true,
+          "description": "是否将格子固定为正方形"
+        },
+        {
+          "name": "reverse",
+          "type": "boolean",
+          "required": true,
+          "description": "内容翻转"
+        },
+        {
+          "name": "direction",
+          "type": "Direction",
+          "required": true,
+          "description": "格子内容排列的方向"
+        },
+        {
+          "name": "onClick",
+          "type": "(item: BaseGridItem, index: number) => void",
+          "required": true,
+          "description": "宫格子项点击事件"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/grid"
+    },
+    {
+      "name": "hoverbutton",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "zIndex",
+          "type": "number",
+          "required": true,
+          "description": "设置组件页面层级"
+        },
+        {
+          "name": "tabbarHeight",
+          "type": "number",
+          "required": true,
+          "description": "底部导航栏高度（不包含安全区高度）"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/hoverbutton"
+    },
+    {
+      "name": "image",
+      "category": "基础组件",
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "required": true,
+          "description": "图片链接"
+        },
+        {
+          "name": "width",
+          "type": "string | number",
+          "required": true,
+          "description": "宽度，默认单位px"
+        },
+        {
+          "name": "height",
+          "type": "string | number",
+          "required": true,
+          "description": "高度，默认单位px"
+        },
+        {
+          "name": "radius",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "圆角大小"
+        },
+        {
+          "name": "error",
+          "type": "ReactNode",
+          "required": true,
+          "description": "是否展示图片加载失败"
+        },
+        {
+          "name": "loading",
+          "type": "ReactNode",
+          "required": true,
+          "description": "是否展示加载中图片"
+        },
+        {
+          "name": "onLoad",
+          "type": "() => void",
+          "required": true,
+          "description": "图片加载完后触发"
+        },
+        {
+          "name": "onError",
+          "type": "() => void",
+          "required": true,
+          "description": "图片加载失败后触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/image"
+    },
+    {
+      "name": "imagepreview",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "images",
+          "type": "Array<IMAGE_SOURCE>",
+          "required": true,
+          "description": "预览图片数组"
+        },
+        {
+          "name": "videos",
+          "type": "Array<VIDEO_SOURCE>",
+          "required": true,
+          "description": "预览的视频数组（视频自动放到图片之前）"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示预览图片"
+        },
+        {
+          "name": "autoPlay",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "自动轮播时长，0表示不会自动轮播"
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "required": false,
+          "description": "页码，受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "required": true,
+          "description": "初始页码"
+        },
+        {
+          "name": "closeOnContentClick",
+          "type": "boolean",
+          "required": true,
+          "description": "点击图片可以退出预览"
+        },
+        {
+          "name": "pagination",
+          "type": "boolean",
+          "required": true,
+          "description": "分页是否展示"
+        },
+        {
+          "name": "indicator",
+          "type": "boolean",
+          "required": true,
+          "description": "分页指示器是否展示"
+        },
+        {
+          "name": "indicatorColor",
+          "type": "string",
+          "required": true,
+          "description": "分页指示器选中的颜色"
+        },
+        {
+          "name": "closeIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "关闭按钮"
+        },
+        {
+          "name": "closeIconPosition",
+          "type": "ImagePreviewCloseIconPosition",
+          "required": true,
+          "description": "关闭按钮位置"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "点击遮罩关闭图片预览时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: number) => void",
+          "required": true,
+          "description": "切换时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/imagepreview"
+    },
+    {
+      "name": "indicator",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "total",
+          "type": "number",
+          "required": true,
+          "description": "总页数"
+        },
+        {
+          "name": "current",
+          "type": "number",
+          "required": true,
+          "description": "当前页"
+        },
+        {
+          "name": "direction",
+          "type": "string",
+          "required": true,
+          "description": "方向，默认为水平方向"
+        },
+        {
+          "name": "color",
+          "type": "IndicatorColor",
+          "required": true,
+          "description": "颜色"
+        },
+        {
+          "name": "type",
+          "type": "IndicatorType",
+          "required": true,
+          "description": "交互类型"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/indicator"
+    },
+    {
+      "name": "infiniteloading",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "type",
+          "type": "InfiniteLoadingType",
+          "required": true,
+          "description": "主题类型"
+        },
+        {
+          "name": "hasMore",
+          "type": "boolean",
+          "required": true,
+          "description": "是否还有更多数据"
+        },
+        {
+          "name": "threshold",
+          "type": "number",
+          "required": true,
+          "description": "距离底部多远加载"
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "required": true,
+          "description": "获取监听的目标元素"
+        },
+        {
+          "name": "pullRefresh",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启下拉刷新"
+        },
+        {
+          "name": "pullingText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "下拉刷新提示文案"
+        },
+        {
+          "name": "loadingText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "上拉加载提示文案"
+        },
+        {
+          "name": "loadMoreText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "“没有更多数据”展示文案"
+        },
+        {
+          "name": "onRefresh",
+          "type": "() => Promise<void>",
+          "required": true,
+          "description": "下拉刷新事件回调"
+        },
+        {
+          "name": "onLoadMore",
+          "type": "() => Promise<void>",
+          "required": true,
+          "description": "继续加载的回调函数"
+        },
+        {
+          "name": "onScroll",
+          "type": "(param: number) => void",
+          "required": true,
+          "description": "实时监听滚动高度"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/infiniteloading"
+    },
+    {
+      "name": "input",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "type",
+          "type": "INPUT_TYPE",
+          "required": true,
+          "description": "输入框类型，支持原生 input 标签的所有 type 属性，另外还支持 number digit"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "组件名字，用于表单提交获取数据"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "description": "初始默认值"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "description": "初始默认值"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "required": false,
+          "description": "输入框为空时占位符"
+        },
+        {
+          "name": "align",
+          "type": "Align",
+          "required": false,
+          "description": "输入框内容对齐方式，可选值 left、center、right"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "required": true,
+          "description": "是否只读"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "required": true,
+          "description": "限制最长输入字符"
+        },
+        {
+          "name": "clearable",
+          "type": "boolean",
+          "required": true,
+          "description": "展示清除 Icon"
+        },
+        {
+          "name": "clearIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "清除图标 Icon <a href=\"#/icon\">可参考 Icon </a>"
+        },
+        {
+          "name": "formatTrigger",
+          "type": "InputFormatTrigger",
+          "required": true,
+          "description": "格式化函数触发的时机，可选值为 onChange、onBlur"
+        },
+        {
+          "name": "autoFocus",
+          "type": "boolean",
+          "required": true,
+          "description": "是否自动获得焦点，iOS 系统不支持该属性"
+        },
+        {
+          "name": "confirmType",
+          "type": "CONFIRM_TYPE",
+          "required": true,
+          "description": "键盘右下角按钮的文字，仅在type='text'时生效,可选值 send：发送、search：搜索、next：下一个、go：前往、done：完成"
+        },
+        {
+          "name": "plain",
+          "type": "boolean",
+          "required": true,
+          "description": "输入框是容器型还是文本型，容器型一般都是带外边框的"
+        },
+        {
+          "name": "inputStyle",
+          "type": "CSSProperties",
+          "required": false,
+          "description": "输入框样式"
+        },
+        {
+          "name": "formatter",
+          "type": "(value: string) => string",
+          "required": false,
+          "description": "输入内容格式化函数"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "required": false,
+          "description": "输入框内容变化时触发"
+        },
+        {
+          "name": "onBlur",
+          "type": "(value: string) => void",
+          "required": false,
+          "description": "失去焦点后触发"
+        },
+        {
+          "name": "onFocus",
+          "type": "(value: string) => void",
+          "required": false,
+          "description": "获得焦点后触发"
+        },
+        {
+          "name": "onClear",
+          "type": "(value: string) => void",
+          "required": false,
+          "description": "点击清空按钮时触发"
+        },
+        {
+          "name": "onClick",
+          "type": "(event: any) => void",
+          "required": false,
+          "description": "点击 input 容器触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/input"
+    },
+    {
+      "name": "inputnumber",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "value",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "当前值，受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "默认值"
+        },
+        {
+          "name": "allowEmpty",
+          "type": "boolean",
+          "required": true,
+          "description": "是否允许内容为空"
+        },
+        {
+          "name": "min",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "最小值限制"
+        },
+        {
+          "name": "max",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "最大值限制"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "禁用所有功能"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "required": true,
+          "description": "只读状态禁用输入框操作行为"
+        },
+        {
+          "name": "step",
+          "type": "number",
+          "required": true,
+          "description": "步长"
+        },
+        {
+          "name": "digits",
+          "type": "number",
+          "required": true,
+          "description": "设置保留的小数位"
+        },
+        {
+          "name": "formatter",
+          "type": "(value?: SimpleValue) => string",
+          "required": false,
+          "description": "指定输入框展示值的格式"
+        },
+        {
+          "name": "onPlus",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击增加按钮时触发"
+        },
+        {
+          "name": "onMinus",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击减少按钮时触发"
+        },
+        {
+          "name": "onOverlimit",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击不可用的按钮时触发"
+        },
+        {
+          "name": "onBlur",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "输入框失去焦点时触发"
+        },
+        {
+          "name": "onFocus",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "输入框获得焦点时触发"
+        },
+        {
+          "name": "beforeChange",
+          "type": "(value: SimpleValue) => boolean | Promise<boolean>",
+          "required": true,
+          "description": "输入值变化前的回调函数，返回 false 可阻止输入，支持返回 Promise"
+        },
+        {
+          "name": "onChange",
+          "type": "(param: string | number, e: any) => void",
+          "required": true,
+          "description": "值改变时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/inputnumber"
+    },
+    {
+      "name": "layout",
+      "category": "布局组件",
+      "props": [],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/layout"
+    },
+    {
+      "name": "loading",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "type",
+          "type": "LoadingType",
+          "required": true,
+          "description": "loading图标的样式"
+        },
+        {
+          "name": "direction",
+          "type": "Direction",
+          "required": true,
+          "description": "loading图标和文字的排列方式"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义loading的图标"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/loading"
+    },
+    {
+      "name": "lottie",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "source",
+          "type": "NonNullable<unknown>",
+          "required": true,
+          "description": "包含导出动画数据的 JSON 对象"
+        },
+        {
+          "name": "loop",
+          "type": "SimpleValue | boolean",
+          "required": true,
+          "description": "loading图标和文字的排列方式"
+        },
+        {
+          "name": "autoPlay",
+          "type": "boolean",
+          "required": true,
+          "description": "动画将在加载后立即播放"
+        },
+        {
+          "name": "initialSegment",
+          "type": "[number, number]",
+          "required": true,
+          "description": "第一个值是初始帧，第二个值是最终帧。如果设置了该值，动画将从此时间位置开始"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "required": true,
+          "description": "播放速度"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/lottie"
+    },
+    {
+      "name": "menu",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "activeColor",
+          "type": "string",
+          "required": true,
+          "description": "选项的选中态图标颜色"
+        },
+        {
+          "name": "closeOnOverlayClick",
+          "type": "boolean",
+          "required": true,
+          "description": "是否在点击遮罩层后关闭菜单"
+        },
+        {
+          "name": "scrollFixed",
+          "type": "boolean | SimpleValue",
+          "required": true,
+          "description": "滚动后是否固定，可设置固定位置"
+        },
+        {
+          "name": "lockScroll",
+          "type": "boolean",
+          "required": true,
+          "description": "背景是否锁定"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义标题图标"
+        },
+        {
+          "name": "onOpen",
+          "type": "MenuCallBack",
+          "required": true,
+          "description": "menu 展开触发"
+        },
+        {
+          "name": "onClose",
+          "type": "MenuCallBack",
+          "required": true,
+          "description": "menu 关闭触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/menu"
+    },
+    {
+      "name": "navbar",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "left",
+          "type": "ReactNode",
+          "required": true,
+          "description": "左侧内容，渲染在返回区域的右侧"
+        },
+        {
+          "name": "back",
+          "type": "ReactNode",
+          "required": true,
+          "description": "返回区域的文字"
+        },
+        {
+          "name": "right",
+          "type": "ReactNode",
+          "required": true,
+          "description": "右侧内容"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "description": "标题"
+        },
+        {
+          "name": "fixed",
+          "type": "boolean",
+          "required": true,
+          "description": "是否固定"
+        },
+        {
+          "name": "safeAreaInsetTop",
+          "type": "boolean",
+          "required": true,
+          "description": "是否适配安全区"
+        },
+        {
+          "name": "placeholder",
+          "type": "boolean",
+          "required": true,
+          "description": "固定在顶部时，是否在标签位置生成一个等高的占位元素"
+        },
+        {
+          "name": "zIndex",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "导航栏层级"
+        },
+        {
+          "name": "onBackClick",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击返回区域后的回调"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/navbar"
+    },
+    {
+      "name": "noticebar",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "align",
+          "type": "Extract<Align, 'left' | 'center'>",
+          "required": true,
+          "description": "布局方式, 值为center时，不支持滚动"
+        },
+        {
+          "name": "direction",
+          "type": "string",
+          "required": true,
+          "description": "滚动的方向，可选 horizontal、vertical"
+        },
+        {
+          "name": "content",
+          "type": "string",
+          "required": true,
+          "description": "提示的信息"
+        },
+        {
+          "name": "closeable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否启用关闭模式"
+        },
+        {
+          "name": "wrap",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启文本换行"
+        },
+        {
+          "name": "leftIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "左边的 icon，closeable 模式下默认为空"
+        },
+        {
+          "name": "rightIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "closeable 模式下，默认为 <Close />"
+        },
+        {
+          "name": "right",
+          "type": "ReactNode",
+          "required": true,
+          "description": "区别于rightIcon，为右边自定义区域，仅用于 direction='horizontal' 模式"
+        },
+        {
+          "name": "delay",
+          "type": "string | number",
+          "required": true,
+          "description": "延时多少秒"
+        },
+        {
+          "name": "scrollable",
+          "type": "boolean | null",
+          "required": true,
+          "description": "是否可以滚动"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "required": true,
+          "description": "滚动速率 (px/s)"
+        },
+        {
+          "name": "onClose",
+          "type": "(event: any) => void",
+          "required": false,
+          "description": "关闭通知栏时触发"
+        },
+        {
+          "name": "onClick",
+          "type": "(event: any) => void",
+          "required": false,
+          "description": "外层点击事件回调"
+        },
+        {
+          "name": "onItemClick",
+          "type": "(event: any, value: any) => void",
+          "required": false,
+          "description": "垂直滚动多条数据时，点击当前展示的信息时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/noticebar"
+    },
+    {
+      "name": "notify",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "distance",
+          "type": "number",
+          "required": true,
+          "description": "距离顶部/底部距离"
+        },
+        {
+          "name": "navHeight",
+          "type": "number",
+          "required": true,
+          "description": "顶部导航高度"
+        },
+        {
+          "name": "closeable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否启用关闭模式"
+        },
+        {
+          "name": "leftIcon",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "左边的 icon"
+        },
+        {
+          "name": "rightIcon",
+          "type": "React.ReactNode",
+          "required": true,
+          "description": "右边的 icon，在 closeable 模式下默认为 <Close />"
+        },
+        {
+          "name": "position",
+          "type": "PositionY",
+          "required": true,
+          "description": "自定义位置 (top, bottom)"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "required": true,
+          "description": "展示时长(ms)，值为 0 时，notify 不会消失"
+        },
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "required": true,
+          "description": "点击事件回调"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "关闭事件回调"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/notify"
+    },
+    {
+      "name": "numberkeyboard",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示键盘"
+        },
+        {
+          "name": "rightActions",
+          "type": "ReactNode",
+          "required": true,
+          "description": "标题右侧内容"
+        },
+        {
+          "name": "confirmText",
+          "type": "string",
+          "required": true,
+          "description": "自定义完成按钮文字，如\"支付\"，\"下一步\"，\"提交\"等，搭配 rightColumn 使用"
+        },
+        {
+          "name": "type",
+          "type": "'default' | 'rightColumn'",
+          "required": true,
+          "description": "键盘模式, default：默认样式 rightColumn：带右侧栏"
+        },
+        {
+          "name": "custom",
+          "type": "Array<string>",
+          "required": true,
+          "description": "自定义键盘额外的键, 数组形式最多支持添加 2 个, 超出默认取前 2 项"
+        },
+        {
+          "name": "random",
+          "type": "boolean",
+          "required": true,
+          "description": "随机数"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "required": true,
+          "description": "点击按键时触发"
+        },
+        {
+          "name": "onDelete",
+          "type": "() => void",
+          "required": true,
+          "description": "点击删除键时触发"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "点击关闭按钮或非键盘区域时触发"
+        },
+        {
+          "name": "onConfirm",
+          "type": "() => void",
+          "required": true,
+          "description": "点击确定按钮时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/numberkeyboard"
+    },
+    {
+      "name": "overlay",
+      "category": "基础组件",
+      "props": [
+        {
+          "name": "zIndex",
+          "type": "number",
+          "required": true,
+          "description": "设置组件页面层级"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "required": true,
+          "description": "动画时长，单位毫秒"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "当前组件是否显示"
+        },
+        {
+          "name": "lockScroll",
+          "type": "boolean",
+          "required": true,
+          "description": "背景是否锁定"
+        },
+        {
+          "name": "closeOnOverlayClick",
+          "type": "boolean",
+          "required": true,
+          "description": "是否点击遮罩关闭"
+        },
+        {
+          "name": "afterShow",
+          "type": "() => void",
+          "required": true,
+          "description": "完全展示后触发"
+        },
+        {
+          "name": "afterClose",
+          "type": "() => void",
+          "required": true,
+          "description": "完全关闭后触发"
+        },
+        {
+          "name": "onClick",
+          "type": "(event: any) => void",
+          "required": true,
+          "description": "点击时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/overlay"
+    },
+    {
+      "name": "pagination",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "required": true,
+          "description": "默认页码，非受控值"
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "description": "当前页码，受控值，与 onChange 搭配使用"
+        },
+        {
+          "name": "mode",
+          "type": "'multi' | 'simple' | 'lite'",
+          "required": true,
+          "description": "显示模式,可选值为：multi，simple, lite"
+        },
+        {
+          "name": "prev",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义上一页按钮内容"
+        },
+        {
+          "name": "next",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义下一页按钮内容"
+        },
+        {
+          "name": "total",
+          "type": "number",
+          "required": true,
+          "description": "总记录数"
+        },
+        {
+          "name": "pageSize",
+          "type": "number",
+          "required": true,
+          "description": "每页记录数"
+        },
+        {
+          "name": "itemSize",
+          "type": "number",
+          "required": true,
+          "description": "显示的页码个数"
+        },
+        {
+          "name": "ellipse",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示省略号"
+        },
+        {
+          "name": "itemRender",
+          "type": "(page: any, index: number) => ReactNode",
+          "required": true,
+          "description": "用于自定义页码的结构"
+        },
+        {
+          "name": "onChange",
+          "type": "(currPage: number) => void",
+          "required": true,
+          "description": "页码改变时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/pagination"
+    },
+    {
+      "name": "picker",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "visible",
+          "type": "boolean | undefined",
+          "required": false,
+          "description": "是否可见"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "description": "设置标题"
+        },
+        {
+          "name": "options",
+          "type": "PickerOptions[]",
+          "required": true,
+          "description": "列表数据"
+        },
+        {
+          "name": "value",
+          "type": "PickerValue[]",
+          "required": false,
+          "description": "选中值，受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "PickerValue[]",
+          "required": false,
+          "description": "默认选中"
+        },
+        {
+          "name": "threeDimensional",
+          "type": "boolean",
+          "required": false,
+          "description": "是否开启3D效果"
+        },
+        {
+          "name": "duration",
+          "type": "number | string",
+          "required": true,
+          "description": "快速滑动时惯性滚动的时长，单位 ms"
+        },
+        {
+          "name": "closeOnOverlayClick",
+          "type": "boolean",
+          "required": true,
+          "description": "是否点击遮罩关闭"
+        },
+        {
+          "name": "popupProps",
+          "type": "POPUP_PROPS",
+          "required": true,
+          "description": "透传popup属性"
+        },
+        {
+          "name": "onConfirm",
+          "type": "(selectedOptions: PickerOptions, selectedValue: PickerValue[]) => void",
+          "required": false,
+          "description": "点击确认按钮时候回调"
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "required": false,
+          "description": "点击取消按钮时触发"
+        },
+        {
+          "name": "onClose",
+          "type": "(selectedOptions: PickerOptions, selectedValue: PickerValue[]) => void",
+          "required": false,
+          "description": "确定和取消时，都触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(args0: PickerOnChangeCallbackParameter) => void",
+          "required": false,
+          "description": "每一列值变更时调用"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/picker"
+    },
+    {
+      "name": "pickerview",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "options",
+          "type": "PickerOptions[]",
+          "required": true,
+          "description": "列表数据"
+        },
+        {
+          "name": "value",
+          "type": "PickerValue[]",
+          "required": false,
+          "description": "选中值，受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "PickerValue[]",
+          "required": false,
+          "description": "默认选中"
+        },
+        {
+          "name": "threeDimensional",
+          "type": "boolean",
+          "required": false,
+          "description": "是否开启3D效果"
+        },
+        {
+          "name": "duration",
+          "type": "number | string",
+          "required": false,
+          "description": "快速滑动时惯性滚动的时长，单位 ms"
+        },
+        {
+          "name": "onChange",
+          "type": "(arg0: PickerOnChangeCallbackParameter) => void",
+          "required": false,
+          "description": "每一列值变更时调用"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/pickerview"
+    },
+    {
+      "name": "popover",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "location",
+          "type": "FullPosition",
+          "required": true,
+          "description": "弹出位置，里面具体的参数值可以参考上面的位置自定义例子"
+        },
+        {
+          "name": "list",
+          "type": "PopoverList[]",
+          "required": true,
+          "description": "选项列表"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示气泡弹出层"
+        },
+        {
+          "name": "offset",
+          "type": "SimpleValues",
+          "required": true,
+          "description": "出现位置的偏移量"
+        },
+        {
+          "name": "targetId",
+          "type": "string",
+          "required": true,
+          "description": "自定义目标元素 id"
+        },
+        {
+          "name": "showArrow",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示小箭头"
+        },
+        {
+          "name": "closeOnOutsideClick",
+          "type": "boolean",
+          "required": true,
+          "description": "是否在点击外部元素后关闭菜单"
+        },
+        {
+          "name": "closeOnActionClick",
+          "type": "boolean",
+          "required": true,
+          "description": "是否在点击选项后关闭"
+        },
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "required": true,
+          "description": "点击切换 popover 展示状态"
+        },
+        {
+          "name": "onOpen",
+          "type": "() => void",
+          "required": true,
+          "description": "点击菜单时触发"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "关闭菜单时触发"
+        },
+        {
+          "name": "onSelect",
+          "type": "(item: PopoverList, index: number) => void",
+          "required": true,
+          "description": "点击选项时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/popover"
+    },
+    {
+      "name": "popup",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "position",
+          "type": "PopupPosition",
+          "required": true,
+          "description": "弹出位置"
+        },
+        {
+          "name": "transition",
+          "type": "string",
+          "required": true,
+          "description": "动画名"
+        },
+        {
+          "name": "closeable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示关闭按钮"
+        },
+        {
+          "name": "closeIconPosition",
+          "type": "PopupCloseIconPosition",
+          "required": true,
+          "description": "关闭按钮位置"
+        },
+        {
+          "name": "closeIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义 Icon"
+        },
+        {
+          "name": "left",
+          "type": "ReactNode",
+          "required": false,
+          "description": "标题左侧部分"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "description": "标题中间部分"
+        },
+        {
+          "name": "top",
+          "type": "ReactNode",
+          "required": false,
+          "description": "頂部佔位"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "description": "子标题/描述部分"
+        },
+        {
+          "name": "destroyOnClose",
+          "type": "boolean",
+          "required": true,
+          "description": "组件不可见时，卸载内容"
+        },
+        {
+          "name": "overlay",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示遮罩"
+        },
+        {
+          "name": "round",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示圆角"
+        },
+        {
+          "name": "resizable",
+          "type": "boolean",
+          "required": true,
+          "description": "上下滑动调整高度，当前只支持从底部弹出"
+        },
+        {
+          "name": "minHeight",
+          "type": "string",
+          "required": true,
+          "description": "设置最小高度"
+        },
+        {
+          "name": "onOpen",
+          "type": "() => void",
+          "required": true,
+          "description": "打开弹框时触发"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "关闭弹框时触发"
+        },
+        {
+          "name": "onOverlayClick",
+          "type": "(e: any) => boolean | void",
+          "required": true,
+          "description": "点击遮罩触发"
+        },
+        {
+          "name": "onCloseIconClick",
+          "type": "(e: any) => boolean | void",
+          "required": true,
+          "description": "点击关闭图标时触发"
+        },
+        {
+          "name": "onTouchMove",
+          "type": "(height: number, e: any, direction: 'up' | 'down') => void",
+          "required": true,
+          "description": "滑动时触发"
+        },
+        {
+          "name": "onTouchStart",
+          "type": "(height: number, e: any) => void",
+          "required": true,
+          "description": "开始触碰时触发"
+        },
+        {
+          "name": "onTouchEnd",
+          "type": "(height: number, e: any) => void",
+          "required": true,
+          "description": "结束触碰时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/popup"
+    },
+    {
+      "name": "price",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "color",
+          "type": "PriceColor",
+          "required": true,
+          "description": "价格类型, 支持自定义颜色"
+        },
+        {
+          "name": "price",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "价格数量"
+        },
+        {
+          "name": "symbol",
+          "type": "string",
+          "required": true,
+          "description": "符号类型"
+        },
+        {
+          "name": "digits",
+          "type": "number | null",
+          "required": true,
+          "description": "小数位位数，传入null数据原样输出"
+        },
+        {
+          "name": "thousands",
+          "type": "boolean",
+          "required": true,
+          "description": "是否按照千分号形式显示"
+        },
+        {
+          "name": "position",
+          "type": "string",
+          "required": true,
+          "description": "符号显示在价格前或者后，before、after"
+        },
+        {
+          "name": "size",
+          "type": "PriceSize",
+          "required": true,
+          "description": "价格尺寸，xlarge | large | normal | small"
+        },
+        {
+          "name": "line",
+          "type": "boolean",
+          "required": true,
+          "description": "是否划线价"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/price"
+    },
+    {
+      "name": "progress",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "percent",
+          "type": "number",
+          "required": true,
+          "description": "百分比"
+        },
+        {
+          "name": "background",
+          "type": "string",
+          "required": true,
+          "description": "进度条背景颜色"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": true,
+          "description": "进度条线条颜色"
+        },
+        {
+          "name": "strokeWidth",
+          "type": "string",
+          "required": true,
+          "description": "进度条宽度"
+        },
+        {
+          "name": "showText",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示文字内容"
+        },
+        {
+          "name": "animated",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示动画效果"
+        },
+        {
+          "name": "lazy",
+          "type": "boolean",
+          "required": true,
+          "description": "每次进入可视区展示进度条动画"
+        },
+        {
+          "name": "delay",
+          "type": "number",
+          "required": true,
+          "description": "延迟数据加载时长，单位 ms"
+        },
+        {
+          "name": "borderRadius",
+          "type": "string",
+          "required": true,
+          "description": "进度条圆角大小"
+        },
+        {
+          "name": "fontSize",
+          "type": "string",
+          "required": true,
+          "description": "进度文字大小"
+        },
+        {
+          "name": "activeMode",
+          "type": "string",
+          "required": true,
+          "description": "动画播放方式"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "required": true,
+          "description": "动画完成时间（单位：毫秒）"
+        },
+        {
+          "name": "ariaLabel",
+          "type": "string",
+          "required": true,
+          "description": "无障碍标签"
+        },
+        {
+          "name": "onActiveEnd",
+          "type": "() => void",
+          "required": true,
+          "description": "动画完成后的回调函数"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/progress"
+    },
+    {
+      "name": "pulltorefresh",
+      "category": "其他",
+      "props": [
+        {
+          "name": "onRefresh",
+          "type": "() => Promise<any>",
+          "required": true,
+          "description": "触发刷新时的处理函数"
+        },
+        {
+          "name": "pullingText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "下拉的提示文案"
+        },
+        {
+          "name": "canReleaseText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "释放的提示文案"
+        },
+        {
+          "name": "refreshingText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "刷新时的提示文案"
+        },
+        {
+          "name": "completeText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "完成时的提示文案"
+        },
+        {
+          "name": "completeDelay",
+          "type": "number",
+          "required": true,
+          "description": "完成后延迟消失的时间，单位为 ms"
+        },
+        {
+          "name": "headHeight",
+          "type": "number",
+          "required": true,
+          "description": "头部提示内容区的高度，单位为 px"
+        },
+        {
+          "name": "threshold",
+          "type": "number",
+          "required": true,
+          "description": "触发刷新需要下拉多少距离，单位为 px"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用下拉刷新"
+        },
+        {
+          "name": "renderIcon",
+          "type": "(status: PullStatus) => ReactNode",
+          "required": true,
+          "description": "根据下拉状态，自定义下拉提示图标"
+        },
+        {
+          "name": "renderText",
+          "type": "(status: PullStatus) => ReactNode",
+          "required": true,
+          "description": "根据下拉状态，自定义下拉提示文案"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/pulltorefresh"
+    },
+    {
+      "name": "quickenter",
+      "category": "其他",
+      "props": [
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": false,
+          "description": "是否可见"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "description": "标题"
+        },
+        {
+          "name": "options",
+          "type": "QuickEnterOption[]",
+          "required": false,
+          "description": "选项列表"
+        },
+        {
+          "name": "popupProps",
+          "type": "POPUP_PROPS",
+          "required": false,
+          "description": "透传给 Popup 组件的属性"
+        },
+        {
+          "name": "closeOnOverlayClick",
+          "type": "boolean",
+          "required": false,
+          "description": "是否在点击遮罩层后关闭"
+        },
+        {
+          "name": "closeIcon",
+          "type": "ReactNode",
+          "required": false,
+          "description": "自定义关闭图标"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/quickenter"
+    },
+    {
+      "name": "radio",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用选择"
+        },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": true,
+          "description": "指定当前是否选中"
+        },
+        {
+          "name": "defaultChecked",
+          "type": "boolean",
+          "required": true,
+          "description": "初始是否选中"
+        },
+        {
+          "name": "shape",
+          "type": "RadioShape",
+          "required": true,
+          "description": "形状"
+        },
+        {
+          "name": "labelPosition",
+          "type": "PositionX",
+          "required": true,
+          "description": "文本所在的位置"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "<a href=\"#/icon\">图标名称</a>，选中前(建议和activeIcon一起修改)"
+        },
+        {
+          "name": "activeIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "<a href=\"#/icon\">图标名称</a>，选中后(建议和icon一起修改)"
+        },
+        {
+          "name": "value",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "携带的标识值，用于 Group 模式"
+        },
+        {
+          "name": "onChange",
+          "type": "(checked: boolean) => void",
+          "required": true,
+          "description": "选中态变化时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/radio"
+    },
+    {
+      "name": "range",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "value",
+          "type": "RangeValue",
+          "required": true,
+          "description": "当前进度百分比，受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "RangeValue",
+          "required": true,
+          "description": "默认进度百分比，非受控"
+        },
+        {
+          "name": "range",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启双滑块模式"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用滑块 boolean"
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "required": true,
+          "description": "最小值"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "required": true,
+          "description": "最大值"
+        },
+        {
+          "name": "step",
+          "type": "number",
+          "required": true,
+          "description": "步长"
+        },
+        {
+          "name": "minDescription",
+          "type": "ReactNode",
+          "required": true,
+          "description": "最小值描述，传 null 表示隐藏"
+        },
+        {
+          "name": "maxDescription",
+          "type": "ReactNode",
+          "required": true,
+          "description": "最大值描述，传 null 表示隐藏"
+        },
+        {
+          "name": "button",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义滑动按钮"
+        },
+        {
+          "name": "vertical",
+          "type": "boolean",
+          "required": true,
+          "description": "是否竖向展示"
+        },
+        {
+          "name": "marks",
+          "type": "Record<string, ReactNode> | RangeMark[]",
+          "required": true,
+          "description": "刻度标示"
+        },
+        {
+          "name": "currentDescription",
+          "type": "((value: RangeValue) => ReactNode) | null",
+          "required": true,
+          "description": "当前值描述，传 null 表示隐藏"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: RangeValue) => void",
+          "required": true,
+          "description": "进度实时变化，通常在受控方式中与 value 一起使用"
+        },
+        {
+          "name": "onStart",
+          "type": "() => void",
+          "required": true,
+          "description": "开始拖动时触发"
+        },
+        {
+          "name": "onEnd",
+          "type": "(value: RangeValue) => void",
+          "required": true,
+          "description": "结束拖动时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/range"
+    },
+    {
+      "name": "rate",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "size",
+          "type": "RateSize",
+          "required": true,
+          "description": "star 尺寸"
+        },
+        {
+          "name": "showScore",
+          "type": "boolean",
+          "required": true,
+          "description": "展示评分"
+        },
+        {
+          "name": "count",
+          "type": "number",
+          "required": true,
+          "description": "star 总数"
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "description": "受控的 star 数值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "required": true,
+          "description": "非受控的 star 默认值"
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "required": true,
+          "description": "最少选中star数量"
+        },
+        {
+          "name": "checkedIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "使用图标(选中)"
+        },
+        {
+          "name": "uncheckedIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "使用图标(未选中)"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "required": true,
+          "description": "是否只读"
+        },
+        {
+          "name": "allowHalf",
+          "type": "boolean",
+          "required": true,
+          "description": "是否半星"
+        },
+        {
+          "name": "touchable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否允许滑动选择 ｜ boolean"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: number) => void",
+          "required": true,
+          "description": "当前 star 数修改时触发"
+        },
+        {
+          "name": "onTouchEnd",
+          "type": "(e: TouchEvent, value: number) => void",
+          "required": true,
+          "description": "touch 滑动结束时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/rate"
+    },
+    {
+      "name": "resultpage",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "description": "标题"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": true,
+          "description": "描述，最多展示两行"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义 icon"
+        },
+        {
+          "name": "status",
+          "type": "ResultPageStatus",
+          "required": true,
+          "description": "状态类型"
+        },
+        {
+          "name": "actions",
+          "type": "ResultPageAction[]",
+          "required": true,
+          "description": "可用于处理操作的一组数据"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/resultpage"
+    },
+    {
+      "name": "safearea",
+      "category": "布局组件",
+      "props": [
+        {
+          "name": "position",
+          "type": "PositionY",
+          "required": true,
+          "description": "安全区的位置"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/safearea"
+    },
+    {
+      "name": "searchbar",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "description": "当前输入的值，受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": true,
+          "description": "当前默认值，支持通过','分割成多个"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "required": true,
+          "description": "输入框默认暗纹"
+        },
+        {
+          "name": "shape",
+          "type": "UIRound",
+          "required": true,
+          "description": "搜索框形状，可选值为 round"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用输入框"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "required": true,
+          "description": "最大输入长度"
+        },
+        {
+          "name": "clearable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示清除按钮"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "required": true,
+          "description": "输入框只读"
+        },
+        {
+          "name": "autoFocus",
+          "type": "boolean",
+          "required": true,
+          "description": "是否自动聚焦"
+        },
+        {
+          "name": "backable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示返回按钮"
+        },
+        {
+          "name": "left",
+          "type": "ReactNode",
+          "required": true,
+          "description": "搜索框左侧区域"
+        },
+        {
+          "name": "right",
+          "type": "ReactNode",
+          "required": true,
+          "description": "搜搜框右侧区域"
+        },
+        {
+          "name": "leftIn",
+          "type": "ReactNode",
+          "required": true,
+          "description": "输入框内左侧区域"
+        },
+        {
+          "name": "rightIn",
+          "type": "ReactNode",
+          "required": true,
+          "description": "输入框内右侧区域"
+        },
+        {
+          "name": "onSearch",
+          "type": "(val: string) => void",
+          "required": true,
+          "description": "确定搜索时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string, e: any) => void",
+          "required": true,
+          "description": "输入内容时触发"
+        },
+        {
+          "name": "onFocus",
+          "type": "(value: string, e: any) => void",
+          "required": true,
+          "description": "聚焦时触发"
+        },
+        {
+          "name": "onBlur",
+          "type": "(value: string, e: any) => void",
+          "required": true,
+          "description": "失焦时触发"
+        },
+        {
+          "name": "onClear",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击清空时触发"
+        },
+        {
+          "name": "onInputClick",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "点击输入区域时触发"
+        },
+        {
+          "name": "onItemClick",
+          "type": "(value: string, e: any) => void",
+          "required": true,
+          "description": "点击默认值的x号触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/searchbar"
+    },
+    {
+      "name": "segmented",
+      "category": "其他",
+      "props": [
+        {
+          "name": "options",
+          "type": "SimpleValues | SegmentedItem[]",
+          "required": true,
+          "description": "选项内容"
+        },
+        {
+          "name": "value",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "当前选中的值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: SimpleValue) => void",
+          "required": true,
+          "description": "选项变化时的回调函数"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/segmented"
+    },
+    {
+      "name": "shortpassword",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "description": "密码字符串"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示短密码框"
+        },
+        {
+          "name": "plain",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示明文"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "description": "标题"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": true,
+          "description": "密码框描述"
+        },
+        {
+          "name": "tips",
+          "type": "ReactNode",
+          "required": true,
+          "description": "提示语"
+        },
+        {
+          "name": "hideFooter",
+          "type": "boolean",
+          "required": true,
+          "description": "是否隐藏底部按钮"
+        },
+        {
+          "name": "length",
+          "type": "number",
+          "required": true,
+          "description": "密码长度，取值为4~6"
+        },
+        {
+          "name": "error",
+          "type": "ReactNode",
+          "required": true,
+          "description": "错误信息提示"
+        },
+        {
+          "name": "autoFocus",
+          "type": "boolean",
+          "required": true,
+          "description": "自动聚焦"
+        },
+        {
+          "name": "onFocus",
+          "type": "() => void",
+          "required": true,
+          "description": "输入框聚焦"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "required": true,
+          "description": "输入密码时触发事件"
+        },
+        {
+          "name": "onConfirm",
+          "type": "(value: string) => void",
+          "required": true,
+          "description": "点击确认时触发事件"
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "required": true,
+          "description": "点击取消时触发事件"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "点击关闭图标和遮罩时触发事件"
+        },
+        {
+          "name": "onTips",
+          "type": "() => void",
+          "required": true,
+          "description": "点击忘记密码时触发事件"
+        },
+        {
+          "name": "onComplete",
+          "type": "(value: string) => void",
+          "required": true,
+          "description": "输入完成的回调"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/shortpassword"
+    },
+    {
+      "name": "sidebar",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "value",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "当前激活的item的key"
+        },
+        {
+          "name": "defaultValue",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "未设置value时，item的key的默认值"
+        },
+        {
+          "name": "contentDuration",
+          "type": "number",
+          "required": true,
+          "description": "内容滚动动画时长"
+        },
+        {
+          "name": "sidebarDuration",
+          "type": "number",
+          "required": true,
+          "description": "侧栏滚动动画时长"
+        },
+        {
+          "name": "onChange",
+          "type": "(index: SimpleValue) => void",
+          "required": true,
+          "description": "当前激活的标签改变时触发"
+        },
+        {
+          "name": "onClick",
+          "type": "(index: SimpleValue) => void",
+          "required": true,
+          "description": "点击标签时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/sidebar"
+    },
+    {
+      "name": "sidenavbar",
+      "category": "其他",
+      "props": [],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/sidenavbar"
+    },
+    {
+      "name": "signature",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "type",
+          "type": "SignatureType",
+          "required": true,
+          "description": "图片格式"
+        },
+        {
+          "name": "lineWidth",
+          "type": "number",
+          "required": true,
+          "description": "线条的宽度"
+        },
+        {
+          "name": "strokeStyle",
+          "type": "string",
+          "required": true,
+          "description": "绘图笔触颜色"
+        },
+        {
+          "name": "unsupported",
+          "type": "ReactNode",
+          "required": true,
+          "description": "不支持 Canvas 情况下的展示文案"
+        },
+        {
+          "name": "onConfirm",
+          "type": "() => void",
+          "required": true,
+          "description": "点击确认按钮触发事件回调函数"
+        },
+        {
+          "name": "onClear",
+          "type": "() => void",
+          "required": true,
+          "description": "点击重签按钮触发事件回调函数"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/signature"
+    },
+    {
+      "name": "skeleton",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "rows",
+          "type": "number",
+          "required": true,
+          "description": "设置行数"
+        },
+        {
+          "name": "size",
+          "type": "Extract<UISize, 'small' | 'normal' | 'large'>",
+          "required": true,
+          "description": "指定使用的内置高度"
+        },
+        {
+          "name": "width",
+          "type": "SimpleValue",
+          "required": false,
+          "description": "设置宽度，优先级高于 size 属性"
+        },
+        {
+          "name": "height",
+          "type": "SimpleValue",
+          "required": false,
+          "description": "设置高度，优先级高于 size 属性"
+        },
+        {
+          "name": "shape",
+          "type": "UIRound | 'circle'",
+          "required": true,
+          "description": "设置形状"
+        },
+        {
+          "name": "animated",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启骨架屏动画"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "required": true,
+          "description": "动画时长"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示骨架屏(true不显示骨架屏，false显示骨架屏)"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/skeleton"
+    },
+    {
+      "name": "space",
+      "category": "布局组件",
+      "props": [
+        {
+          "name": "direction",
+          "type": "Direction",
+          "required": true,
+          "description": "间距方向"
+        },
+        {
+          "name": "align",
+          "type": "SpaceAlign",
+          "required": true,
+          "description": "交叉轴对齐方式"
+        },
+        {
+          "name": "justify",
+          "type": "FlexJustify",
+          "required": true,
+          "description": "主轴对齐方式"
+        },
+        {
+          "name": "wrap",
+          "type": "boolean",
+          "required": true,
+          "description": "是否自动换行，仅在 horizontal 时有效"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/space"
+    },
+    {
+      "name": "steps",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "status",
+          "type": "StepsStatus",
+          "required": true,
+          "description": "步骤条的展示状态"
+        },
+        {
+          "name": "direction",
+          "type": "StepDirection",
+          "required": true,
+          "description": "步骤条的显示方向"
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "description": "当前所在的步骤"
+        },
+        {
+          "name": "type",
+          "type": "StepType",
+          "required": true,
+          "description": "步骤条的类型"
+        },
+        {
+          "name": "layout",
+          "type": "StepLayout",
+          "required": true,
+          "description": "步骤条的布局方式"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义图标"
+        },
+        {
+          "name": "onStepClick",
+          "type": "(index: number) => void",
+          "required": true,
+          "description": "点击切换步骤条时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/steps"
+    },
+    {
+      "name": "sticky",
+      "category": "布局组件",
+      "props": [
+        {
+          "name": "container",
+          "type": "CONTAINER",
+          "required": true,
+          "description": "容器的 ref"
+        },
+        {
+          "name": "position",
+          "type": "PositionY",
+          "required": true,
+          "description": "吸附位置"
+        },
+        {
+          "name": "threshold",
+          "type": "number",
+          "required": true,
+          "description": "距离，当 position 为 top 时，设置的是 top"
+        },
+        {
+          "name": "zIndex",
+          "type": "number",
+          "required": true,
+          "description": "吸附时的层级"
+        },
+        {
+          "name": "onChange",
+          "type": "(val: boolean) => void",
+          "required": true,
+          "description": "吸附状态改变时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/sticky"
+    },
+    {
+      "name": "swipe",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "name",
+          "type": "SimpleValue",
+          "required": false,
+          "description": "标识符，可以在事件参数中获取到"
+        },
+        {
+          "name": "leftAction",
+          "type": "ReactNode",
+          "required": false,
+          "description": "左侧滑动区域的内容"
+        },
+        {
+          "name": "rightAction",
+          "type": "ReactNode",
+          "required": false,
+          "description": "右侧滑动区域的内容"
+        },
+        {
+          "name": "beforeClose",
+          "type": "(position: string) => void",
+          "required": false,
+          "description": "关闭前的回调函数，返回滑动区域所在方向 position"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "description": "是否禁用滑动"
+        },
+        {
+          "name": "onOpen",
+          "type": "({ name, position, }: {",
+          "required": false,
+          "description": "打开单元格侧边栏"
+        },
+        {
+          "name": "onClose",
+          "type": "({ name, position, }: {",
+          "required": false,
+          "description": "收起单元格侧边栏"
+        },
+        {
+          "name": "onActionClick",
+          "type": "(event: any, position: PositionX) => void",
+          "required": false,
+          "description": "点击左侧或者右侧时触发"
+        },
+        {
+          "name": "onTouchStart",
+          "type": "(event: any) => void",
+          "required": false,
+          "description": "开始触碰时触发"
+        },
+        {
+          "name": "onTouchEnd",
+          "type": "(event: any) => void",
+          "required": false,
+          "description": "结束触碰时触发"
+        },
+        {
+          "name": "onTouchMove",
+          "type": "(event: any) => void",
+          "required": false,
+          "description": "滑动时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/swipe"
+    },
+    {
+      "name": "swiper",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "direction",
+          "type": "Direction",
+          "required": true,
+          "description": "轮播方向"
+        },
+        {
+          "name": "indicator",
+          "type": "ReactNode",
+          "required": true,
+          "description": "分页指示器是否展示"
+        },
+        {
+          "name": "loop",
+          "type": "boolean",
+          "required": true,
+          "description": "是否循环轮播"
+        },
+        {
+          "name": "autoPlay",
+          "type": "boolean | number",
+          "required": true,
+          "description": "@deprecated Please use `autoplay` prop instead."
+        },
+        {
+          "name": "autoplay",
+          "type": "boolean | number",
+          "required": true,
+          "description": "自动轮播"
+        },
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "required": true,
+          "description": "初始化索引值"
+        },
+        {
+          "name": "onChange",
+          "type": "(index: number) => void",
+          "required": false,
+          "description": "卡片切换后的回调"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/swiper"
+    },
+    {
+      "name": "switch",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": true,
+          "description": "开关状态，受控"
+        },
+        {
+          "name": "defaultChecked",
+          "type": "boolean",
+          "required": true,
+          "description": "开关状态，非受控"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "禁用状态"
+        },
+        {
+          "name": "activeText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "打开时文字描述"
+        },
+        {
+          "name": "inactiveText",
+          "type": "ReactNode",
+          "required": true,
+          "description": "关闭时文字描述"
+        },
+        {
+          "name": "loadingIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "控制加载状态的图标，传入空值时禁用 loading 态"
+        },
+        {
+          "name": "loading",
+          "type": "boolean | undefined",
+          "required": true,
+          "description": "loading 态，受控"
+        },
+        {
+          "name": "onLoadingChange",
+          "type": "(loading: boolean) => void",
+          "required": true,
+          "description": "切换 loading 态时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(val: boolean) => void",
+          "required": true,
+          "description": "切换开关时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/switch"
+    },
+    {
+      "name": "tabbar",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "required": true,
+          "description": "默认选中的标签的索引值"
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "required": false,
+          "description": "选中的标签的索引值"
+        },
+        {
+          "name": "fixed",
+          "type": "boolean",
+          "required": true,
+          "description": "是否固定在页面底部，为 true 时默认开启 safeArea"
+        },
+        {
+          "name": "inactiveColor",
+          "type": "string",
+          "required": true,
+          "description": "icon未激活的颜色"
+        },
+        {
+          "name": "activeColor",
+          "type": "string",
+          "required": true,
+          "description": "icon激活的颜色"
+        },
+        {
+          "name": "safeArea",
+          "type": "boolean",
+          "required": true,
+          "description": "是否开启iphone系列全面屏底部安全区适配"
+        },
+        {
+          "name": "onSwitch",
+          "type": "(value: number) => void",
+          "required": true,
+          "description": "切换页签时触发事件"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/tabbar"
+    },
+    {
+      "name": "table",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "columns",
+          "type": "Array<TableColumnProps>",
+          "required": true,
+          "description": "表头数据"
+        },
+        {
+          "name": "data",
+          "type": "Array<any>",
+          "required": true,
+          "description": "表格数据"
+        },
+        {
+          "name": "bordered",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示边框"
+        },
+        {
+          "name": "summary",
+          "type": "ReactNode",
+          "required": false,
+          "description": "是否显示简介"
+        },
+        {
+          "name": "striped",
+          "type": "boolean",
+          "required": false,
+          "description": "条纹是否明暗交替"
+        },
+        {
+          "name": "noData",
+          "type": "ReactNode",
+          "required": false,
+          "description": "自定义无数据"
+        },
+        {
+          "name": "sorterIcon",
+          "type": "ReactNode",
+          "required": false,
+          "description": "排序 icon"
+        },
+        {
+          "name": "onSort",
+          "type": "(column: TableColumnProps, sortedData: Array<any>) => void",
+          "required": false,
+          "description": "点击排序按钮触发"
+        },
+        {
+          "name": "showHeader",
+          "type": "boolean",
+          "required": false,
+          "description": "是否显示表头"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/table"
+    },
+    {
+      "name": "tabs",
+      "category": "导航组件",
+      "props": [
+        {
+          "name": "tabStyle",
+          "type": "CSSProperties",
+          "required": true,
+          "description": "标签栏样式"
+        },
+        {
+          "name": "value",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "当前激活 tab 面板的值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "初始化激活 tab 的值"
+        },
+        {
+          "name": "activeColor",
+          "type": "string",
+          "required": true,
+          "description": "标签选中色"
+        },
+        {
+          "name": "direction",
+          "type": "Direction",
+          "required": true,
+          "description": "使用横纵方向"
+        },
+        {
+          "name": "activeType",
+          "type": "'line' | 'smile' | 'simple' | 'card' | 'button' | 'divider'",
+          "required": true,
+          "description": "选中底部展示样式 可选值 line、smile、simple、card、button、divider"
+        },
+        {
+          "name": "duration",
+          "type": "number | string",
+          "required": true,
+          "description": "切换动画时长,单位 ms 0 代表无动画"
+        },
+        {
+          "name": "align",
+          "type": "PositionX",
+          "required": true,
+          "description": "标题对齐方式"
+        },
+        {
+          "name": "title",
+          "type": "() => ReactNode[]",
+          "required": true,
+          "description": "自定义导航区域"
+        },
+        {
+          "name": "onChange",
+          "type": "(index: SimpleValue) => void",
+          "required": true,
+          "description": "当前激活的标签改变时触发"
+        },
+        {
+          "name": "onClick",
+          "type": "(index: SimpleValue) => void",
+          "required": true,
+          "description": "点击标签时触发"
+        },
+        {
+          "name": "autoHeight",
+          "type": "boolean",
+          "required": true,
+          "description": "自动高度。设置为 true 时，nut-tabs 和 nut-tabs\\_\\_content 会随着当前 nut-tabpane 的高度而发生变化。"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/tabs"
+    },
+    {
+      "name": "tag",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "type",
+          "type": "UIType",
+          "required": true,
+          "description": "标签类型"
+        },
+        {
+          "name": "background",
+          "type": "string",
+          "required": true,
+          "description": "标签颜色"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": true,
+          "description": "文本颜色，优先级高于color属性"
+        },
+        {
+          "name": "plain",
+          "type": "boolean",
+          "required": true,
+          "description": "是否为空心样式"
+        },
+        {
+          "name": "round",
+          "type": "boolean",
+          "required": true,
+          "description": "是否为圆角样式"
+        },
+        {
+          "name": "mark",
+          "type": "boolean",
+          "required": true,
+          "description": "是否为标记样式"
+        },
+        {
+          "name": "closeable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否为可关闭标签"
+        },
+        {
+          "name": "closeIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "关闭按钮"
+        },
+        {
+          "name": "onClick",
+          "type": "(e: EVENT) => void",
+          "required": true,
+          "description": "点击事件"
+        },
+        {
+          "name": "onClose",
+          "type": "(e: EVENT) => void",
+          "required": true,
+          "description": "关闭事件"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/tag"
+    },
+    {
+      "name": "textarea",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "description": "输入框内容，受控"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": true,
+          "description": "初始默认值，非受控"
+        },
+        {
+          "name": "showCount",
+          "type": "boolean",
+          "required": true,
+          "description": "textarea 是否展示输入字符。须配合maxLength使用"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "required": true,
+          "description": "限制最长输入字符，-1 表示无限制"
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "required": true,
+          "description": "textarea 的行数（仅支持H5）"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "required": true,
+          "description": "设置占位提示文字"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "required": true,
+          "description": "只读属性"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "禁用属性"
+        },
+        {
+          "name": "autoSize",
+          "type": "boolean",
+          "required": true,
+          "description": "高度是否可拉伸"
+        },
+        {
+          "name": "plain",
+          "type": "boolean",
+          "required": true,
+          "description": "标记文本域的容器类型，false 为容器型 container, true 为 纯文本型"
+        },
+        {
+          "name": "status",
+          "type": "'error' | 'default'",
+          "required": true,
+          "description": "文本域状态，可标记为 默认状态 和 错误状态"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "required": true,
+          "description": "输入内容时触发"
+        },
+        {
+          "name": "onBlur",
+          "type": "(event: EVENT) => void",
+          "required": true,
+          "description": "失焦时触发"
+        },
+        {
+          "name": "onFocus",
+          "type": "(event: EVENT) => void",
+          "required": true,
+          "description": "聚焦时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/textarea"
+    },
+    {
+      "name": "timeselect",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示弹层"
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "required": false,
+          "description": "是否支持多选"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "description": "弹层标题"
+        },
+        {
+          "name": "defaultValue",
+          "type": "TimeSelectDateType[]",
+          "required": true,
+          "description": "默认选中的值，非受控"
+        },
+        {
+          "name": "options",
+          "type": "TimeSelectDateType[]",
+          "required": true,
+          "description": "数据"
+        },
+        {
+          "name": "optionKey",
+          "type": "TimeSelectOptionKeyType",
+          "required": true,
+          "description": "配置数据中的关键字, valueKey, textKey, childrenKey"
+        },
+        {
+          "name": "onSelect",
+          "type": "(value: TimeSelectDateType[]) => void",
+          "required": false,
+          "description": "关闭遮罩之后的回调"
+        },
+        {
+          "name": "onDateChange",
+          "type": "(date: TimeSelectDateType, value: TimeSelectDateType[]) => void",
+          "required": false,
+          "description": "点击左栏时的回调"
+        },
+        {
+          "name": "onTimeChange",
+          "type": "(time: TimeType, value: TimeSelectDateType[]) => void",
+          "required": false,
+          "description": "点击右侧选项时的回调"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/timeselect"
+    },
+    {
+      "name": "toast",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "position",
+          "type": "VAlign",
+          "required": true,
+          "description": "toast展示位置"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "description": "标题"
+        },
+        {
+          "name": "size",
+          "type": "ToastSize",
+          "required": true,
+          "description": "文案尺寸，三选一"
+        },
+        {
+          "name": "icon",
+          "type": "ToastIcon",
+          "required": true,
+          "description": "自定义图标，对应icon组件，支持图片链接"
+        },
+        {
+          "name": "content",
+          "type": "ReactNode",
+          "required": true,
+          "description": "消息文本内容"
+        },
+        {
+          "name": "contentClassName",
+          "type": "string",
+          "required": true,
+          "description": "自定义内容区类名"
+        },
+        {
+          "name": "contentStyle",
+          "type": "CSSProperties",
+          "required": true,
+          "description": "自定义内容区样式"
+        },
+        {
+          "name": "wordBreak",
+          "type": "ToastWordBreak",
+          "required": true,
+          "description": "换行截断方式"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": true,
+          "description": "关闭时触发的事件"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/toast"
+    },
+    {
+      "name": "tour",
+      "category": "操作反馈",
+      "props": [
+        {
+          "name": "visible",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示引导弹出层"
+        },
+        {
+          "name": "type",
+          "type": "TourType",
+          "required": true,
+          "description": "引导类型"
+        },
+        {
+          "name": "location",
+          "type": "FullPosition",
+          "required": true,
+          "description": "弹出层位置,同 Popopver 的[location 属性](#/zh-CN/component/popover)"
+        },
+        {
+          "name": "mask",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示镂空遮罩"
+        },
+        {
+          "name": "maskWidth",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "镂空遮罩层宽度"
+        },
+        {
+          "name": "maskHeight",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "镂空遮罩层高度"
+        },
+        {
+          "name": "offset",
+          "type": "number[]",
+          "required": true,
+          "description": "镂空遮罩相对于目标元素的偏移量"
+        },
+        {
+          "name": "list",
+          "type": "TourList[]",
+          "required": true,
+          "description": "引导步骤内容"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "description": "是否展示标题栏"
+        },
+        {
+          "name": "next",
+          "type": "ReactNode",
+          "required": true,
+          "description": "下一步按钮文案"
+        },
+        {
+          "name": "prev",
+          "type": "ReactNode",
+          "required": true,
+          "description": "上一步按钮文案"
+        },
+        {
+          "name": "complete",
+          "type": "ReactNode",
+          "required": true,
+          "description": "完成按钮文案"
+        },
+        {
+          "name": "showPrev",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示上一步按钮"
+        },
+        {
+          "name": "closeOnOverlayClick",
+          "type": "boolean",
+          "required": true,
+          "description": "是否在点击镂空遮罩层后关闭,同 Popopver 的[closeOnClickOverlay 属性](#/zh-CN/component/popover)"
+        },
+        {
+          "name": "onClose",
+          "type": "(e: any) => void",
+          "required": true,
+          "description": "气泡层关闭时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: number) => void",
+          "required": true,
+          "description": "切换步骤时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/tour"
+    },
+    {
+      "name": "trendarrow",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "description": "数值，大于0时箭头向上，小于0时箭头向下"
+        },
+        {
+          "name": "digits",
+          "type": "number",
+          "required": true,
+          "description": "小数位精度"
+        },
+        {
+          "name": "symbol",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示加减号"
+        },
+        {
+          "name": "zero",
+          "type": "boolean",
+          "required": true,
+          "description": "是否显示 0"
+        },
+        {
+          "name": "left",
+          "type": "boolean",
+          "required": true,
+          "description": "是否在数字左侧显示箭头"
+        },
+        {
+          "name": "sync",
+          "type": "boolean",
+          "required": true,
+          "description": "文字颜色是否与箭头同步"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": true,
+          "description": "文字颜色"
+        },
+        {
+          "name": "riseColor",
+          "type": "string",
+          "required": true,
+          "description": "向上箭头颜色"
+        },
+        {
+          "name": "dropColor",
+          "type": "string",
+          "required": true,
+          "description": "向下箭头颜色"
+        },
+        {
+          "name": "riseIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义向上箭头icon"
+        },
+        {
+          "name": "dropIcon",
+          "type": "ReactNode",
+          "required": true,
+          "description": "自定义向下箭头icon"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/trendarrow"
+    },
+    {
+      "name": "uploader",
+      "category": "数据录入",
+      "props": [
+        {
+          "name": "maxCount",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "文件上传数量限制"
+        },
+        {
+          "name": "maxFileSize",
+          "type": "number",
+          "required": true,
+          "description": "可以设定最大上传文件的大小（字节）"
+        },
+        {
+          "name": "defaultValue",
+          "type": "UploaderFileItem[]",
+          "required": false,
+          "description": "默认已经上传的文件列表"
+        },
+        {
+          "name": "value",
+          "type": "UploaderFileItem[]",
+          "required": false,
+          "description": "已经上传的文件列表"
+        },
+        {
+          "name": "previewType",
+          "type": "'picture' | 'list'",
+          "required": true,
+          "description": "上传列表的内建样式，支持两种基本样式 picture、list"
+        },
+        {
+          "name": "fit",
+          "type": "'contain' | 'cover' | 'fill' | 'none' | 'scale-down'",
+          "required": true,
+          "description": "图片填充模式"
+        },
+        {
+          "name": "upload",
+          "type": "(file: File) => Promise<UploaderFileItem>",
+          "required": true,
+          "description": "上传方法，入参是需要被上传的文件对象，经过异步处理之后，返回上传结果"
+        },
+        {
+          "name": "uploadIcon",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "上传区域<a href=\"#/zh-CN/component/icon\">图标名称</a>"
+        },
+        {
+          "name": "deleteIcon",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "删除区域的图标名称"
+        },
+        {
+          "name": "uploadLabel",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "上传区域图片下方文字"
+        },
+        {
+          "name": "listUploadRender",
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "自定义列表模式的上传区域"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "input 标签 name 的名称，发到后台的文件参数名"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": true,
+          "description": "是否禁用文件上传"
+        },
+        {
+          "name": "autoUpload",
+          "type": "boolean",
+          "required": true,
+          "description": "是否在选取文件后立即进行上传，false 时需要手动执行 ref submit 方法进行上传"
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "required": true,
+          "description": "是否支持文件多选"
+        },
+        {
+          "name": "clearInput",
+          "type": "boolean",
+          "required": true,
+          "description": "是否需要清空input内容，设为true支持重复选择上传同一个文件"
+        },
+        {
+          "name": "preview",
+          "type": "boolean",
+          "required": true,
+          "description": "是否上传成功后展示预览图"
+        },
+        {
+          "name": "deletable",
+          "type": "boolean",
+          "required": true,
+          "description": "是否展示删除按钮"
+        },
+        {
+          "name": "previewUrl",
+          "type": "string",
+          "required": false,
+          "description": "当上传非图片('image')格式的默认图片地址"
+        },
+        {
+          "name": "onDelete",
+          "type": "(file: UploaderFileItem, files: UploaderFileItem[]) => void",
+          "required": false,
+          "description": "点击删除文件时触发"
+        },
+        {
+          "name": "onOversize",
+          "type": "(files: File[]) => void",
+          "required": false,
+          "description": "文件大小超过限制时触发"
+        },
+        {
+          "name": "onOverCount",
+          "type": "(count: number) => void",
+          "required": false,
+          "description": "文件数量超过限制时触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(files: UploaderFileItem[]) => void",
+          "required": false,
+          "description": "已上传的文件列表变化时触发"
+        },
+        {
+          "name": "beforeUpload",
+          "type": "(files: File[]) => Promise<File[]>",
+          "required": false,
+          "description": "上传前的函数需要返回一个Promise对象"
+        },
+        {
+          "name": "beforeDelete",
+          "type": "(file: UploaderFileItem, files: UploaderFileItem[]) => boolean",
+          "required": false,
+          "description": "除文件时的回调，返回值为 false 时不移除。支持返回一个 Promise 对象，Promise 对象 resolve(false) 或 reject 时不移除"
+        },
+        {
+          "name": "onFileItemClick",
+          "type": "(file: UploaderFileItem, index: number) => void",
+          "required": false,
+          "description": "文件上传成功后点击触发"
+        },
+        {
+          "name": "onUploadQueueChange",
+          "type": "(tasks: UploaderFileItem[]) => void",
+          "required": false,
+          "description": "图片上传队列变化时触发"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/uploader"
+    },
+    {
+      "name": "video",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "source",
+          "type": "{",
+          "required": true,
+          "description": "视频地址和类型设置"
+        },
+        {
+          "name": "options",
+          "type": "{",
+          "required": true,
+          "description": "控制视频播放属性"
+        },
+        {
+          "name": "onPlay",
+          "type": "(element: any) => void",
+          "required": false,
+          "description": "播放"
+        },
+        {
+          "name": "onPause",
+          "type": "(element: any) => void",
+          "required": false,
+          "description": "暂停"
+        },
+        {
+          "name": "onPlayEnd",
+          "type": "(element: any) => void",
+          "required": false,
+          "description": "播放完成回调"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/video"
+    },
+    {
+      "name": "virtuallist",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "list",
+          "type": "Array<any>",
+          "required": true,
+          "description": "获取数据"
+        },
+        {
+          "name": "containerHeight",
+          "type": "number",
+          "required": true,
+          "description": "容器高度"
+        },
+        {
+          "name": "itemRender",
+          "type": "(data: any, dataIndex: number, index: number) => ReactNode",
+          "required": true,
+          "description": "virtual 列表父节点渲染的函数"
+        },
+        {
+          "name": "itemHeight",
+          "type": "number",
+          "required": true,
+          "description": "item 高度，如果不定高，则为首屏单个最大 height"
+        },
+        {
+          "name": "itemEqual",
+          "type": "boolean",
+          "required": true,
+          "description": "item 高度是否一致"
+        },
+        {
+          "name": "overscan",
+          "type": "number",
+          "required": true,
+          "description": "除了视窗里面默认的元素, 还需要额外渲染的 item 个数"
+        },
+        {
+          "name": "onScroll",
+          "type": "() => void",
+          "required": true,
+          "description": "滑动到底的事件，可以实现无限滚动"
+        },
+        {
+          "name": "key",
+          "type": "string",
+          "required": true,
+          "description": "用于指定 list 数据每一项的唯一 key 的字段名，默认取下标"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/virtuallist"
+    },
+    {
+      "name": "watermark",
+      "category": "数据展示",
+      "props": [
+        {
+          "name": "content",
+          "type": "string",
+          "required": true,
+          "description": "水印文字内容"
+        },
+        {
+          "name": "fullPage",
+          "type": "boolean",
+          "required": true,
+          "description": "是否覆盖整个页面"
+        },
+        {
+          "name": "zIndex",
+          "type": "number",
+          "required": true,
+          "description": "追加的水印元素的 z-index"
+        },
+        {
+          "name": "gapX",
+          "type": "number",
+          "required": true,
+          "description": "水印之间的水平间距"
+        },
+        {
+          "name": "gapY",
+          "type": "number",
+          "required": true,
+          "description": "水印之间的垂直间距"
+        },
+        {
+          "name": "startX",
+          "type": "number",
+          "required": true,
+          "description": "水印之间的水平起点"
+        },
+        {
+          "name": "startY",
+          "type": "number",
+          "required": true,
+          "description": "水印之间的垂直起点"
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "required": true,
+          "description": "水印的宽度"
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "required": true,
+          "description": "水印的高度"
+        },
+        {
+          "name": "image",
+          "type": "string",
+          "required": true,
+          "description": "图片源，建议导出 2 倍或 3 倍图，优先使用图片渲染水印"
+        },
+        {
+          "name": "imageWidth",
+          "type": "number",
+          "required": true,
+          "description": "图片宽度"
+        },
+        {
+          "name": "imageHeight",
+          "type": "number",
+          "required": true,
+          "description": "图片高度"
+        },
+        {
+          "name": "rotate",
+          "type": "number",
+          "required": true,
+          "description": "水印绘制时，旋转的角度"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": true,
+          "description": "水印文字颜色"
+        },
+        {
+          "name": "fontFamily",
+          "type": "string",
+          "required": true,
+          "description": "水印文字字体"
+        },
+        {
+          "name": "fontSize",
+          "type": "SimpleValue",
+          "required": true,
+          "description": "文字大小"
+        }
+      ],
+      "docUrl": "https://nutui.jd.com/taro/react/3x/#/zh-CN/component/watermark"
+    }
+  ]
+}
