@@ -47,10 +47,10 @@ Server 会通过 stdin/stdout 通信，保持运行不要关。
 
 ### 步骤一：找到项目的 .mcp.json
 
-在你使用 Claude Code 的项目目录下，编辑 `.mcp.json` 文件。例如项目在 `/Users/qiumengbo.123/Desktop/embodio-fe/embodio-fe/`，则编辑：
+在你使用 Claude Code 的项目目录下，编辑 `.mcp.json` 文件。例如项目在 `~/Desktop/embodio-fe/embodio-fe/`，则编辑：
 
 ```
-/Users/qiumengbo.123/Desktop/embodio-fe/embodio-fe/.mcp.json
+~/Desktop/embodio-fe/embodio-fe/.mcp.json
 ```
 
 ### 步骤二：添加 nutui 配置
@@ -59,9 +59,9 @@ Server 会通过 stdin/stdout 通信，保持运行不要关。
 {
   "mcpServers": {
     "nutui": {
-      "command": "/Users/qiumengbo.123/Desktop/NutUI-MCP/node_modules/.bin/tsx",
+      "command": "~/NutUI-MCP/node_modules/.bin/tsx",
       "args": [
-        "/Users/qiumengbo.123/Desktop/NutUI-MCP/src/server.ts"
+        "~/NutUI-MCP/src/server.ts"
       ]
     }
   }
