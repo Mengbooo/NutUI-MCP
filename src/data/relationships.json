@@ -1,0 +1,1191 @@
+{
+  "form": {
+    "label": "表单组合",
+    "description": "NutUI 提供完整的表单解决方案，支持数据验证和布局",
+    "related": [
+      "formitem",
+      "input",
+      "inputnumber",
+      "textarea",
+      "checkbox",
+      "radio",
+      "switch",
+      "picker",
+      "datepicker",
+      "cascader",
+      "rate",
+      "range",
+      "uploader",
+      "searchbar"
+    ],
+    "commonPatterns": [
+      "Form + FormItem + Input",
+      "Form + DatePicker + Cascader",
+      "Form + Checkbox/Radio + Switch"
+    ]
+  },
+  "formitem": {
+    "label": "表单项",
+    "description": "FormItem 是表单的字段组件，必须包裹在 Form 内使用",
+    "related": [
+      "form",
+      "input",
+      "textarea",
+      "inputnumber",
+      "checkbox",
+      "radio",
+      "switch",
+      "picker"
+    ]
+  },
+  "input": {
+    "label": "文本输入",
+    "description": "支持单行文本输入，可与 Form/FormItem 配合做数据校验",
+    "related": [
+      "form",
+      "formitem",
+      "textarea",
+      "searchbar"
+    ],
+    "commonPatterns": [
+      "Form + FormItem + Input",
+      "SearchBar (内置 Input)"
+    ]
+  },
+  "textarea": {
+    "label": "多行文本",
+    "description": "多行文本输入框，支持自动增高和字数统计",
+    "related": [
+      "form",
+      "formitem",
+      "input"
+    ]
+  },
+  "inputnumber": {
+    "label": "数字输入",
+    "description": "带增减按钮的数字输入框，适合数量、金额等场景",
+    "related": [
+      "form",
+      "formitem",
+      "input"
+    ]
+  },
+  "switch": {
+    "label": "开关",
+    "description": "布尔值切换组件，常用于启用/禁用设置项",
+    "related": [
+      "form",
+      "formitem",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Cell + Switch (设置项)",
+      "Form + FormItem + Switch"
+    ]
+  },
+  "checkbox": {
+    "label": "复选框",
+    "description": "多选组件，单独使用或配合 Cell/Form",
+    "related": [
+      "form",
+      "formitem",
+      "cell",
+      "radiogroup"
+    ],
+    "commonPatterns": [
+      "Cell + Checkbox (列表选择)",
+      "CheckboxGroup + Checkbox"
+    ]
+  },
+  "radio": {
+    "label": "单选框",
+    "description": "单选组件，配合 Radiogroup 使用",
+    "related": [
+      "form",
+      "formitem",
+      "radiogroup",
+      "cell"
+    ],
+    "commonPatterns": [
+      "RadioGroup + Radio (互斥选项)",
+      "Cell + Radio (列表选择)"
+    ]
+  },
+  "picker": {
+    "label": "选择器",
+    "description": "多列选择器，支持联动和非联动模式",
+    "related": [
+      "form",
+      "formitem",
+      "picker",
+      "cascader",
+      "datepicker"
+    ],
+    "commonPatterns": [
+      "Form + Picker (单列/多列选择)",
+      "Picker + DatePicker (时间场景)"
+    ]
+  },
+  "datepicker": {
+    "label": "日期选择",
+    "description": "日期/时间选择，支持日期范围和快捷操作",
+    "related": [
+      "form",
+      "formitem",
+      "picker",
+      "calendar",
+      "calendarcard"
+    ],
+    "commonPatterns": [
+      "Form + DatePicker (日期录入)",
+      "Calendar (日历场景)"
+    ]
+  },
+  "cascader": {
+    "label": "级联选择",
+    "description": "多级联动选择器，适合省市区等树形数据",
+    "related": [
+      "form",
+      "formitem",
+      "picker"
+    ],
+    "commonPatterns": [
+      "Form + Cascader (地址选择)",
+      "Address (完整地址方案)"
+    ]
+  },
+  "rate": {
+    "label": "评分",
+    "description": "星级评分组件，适合评价场景",
+    "related": [
+      "form",
+      "formitem",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Cell + Rate (评价页)",
+      "Form + FormItem + Rate"
+    ]
+  },
+  "uploader": {
+    "label": "文件上传",
+    "description": "图片/文件上传，支持预览、删除、压缩",
+    "related": [
+      "form",
+      "formitem",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Cell + Uploader (设置头像/附件)",
+      "Form + FormItem + Uploader"
+    ]
+  },
+  "searchbar": {
+    "label": "搜索框",
+    "description": "带搜索功能的输入框，内置取消、历史记录",
+    "related": [
+      "input",
+      "filter",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Navbar + SearchBar (顶部搜索)",
+      "SearchBar + Filter (筛选搜索)"
+    ]
+  },
+  "cell": {
+    "label": "单元格",
+    "description": "列表项基础组件，支持标题、描述、图标、跳转",
+    "related": [
+      "uploader",
+      "switch",
+      "checkbox",
+      "radio",
+      "badge",
+      "tag",
+      "avatar"
+    ],
+    "commonPatterns": [
+      "Cell + Switch (设置页)",
+      "Cell + Badge/Tag (状态标签)",
+      "CellGroup (分组列表)"
+    ]
+  },
+  "swipe": {
+    "label": "滑动操作",
+    "description": "列表项左滑出现操作按钮，如删除、收藏",
+    "related": [
+      "cell",
+      "infiniteLoading"
+    ],
+    "commonPatterns": [
+      "Cell + Swipe (可滑动列表)",
+      "Swipe + Button (操作组)"
+    ]
+  },
+  "infiniteLoading": {
+    "label": "无限滚动",
+    "description": "滚动到底部自动加载更多数据",
+    "related": [
+      "cell",
+      "swipe",
+      "list"
+    ],
+    "commonPatterns": [
+      "List + InfiniteLoading (列表加载)",
+      "Cell + InfiniteLoading (长列表)"
+    ]
+  },
+  "pullRefresh": {
+    "label": "下拉刷新",
+    "description": "下拉触发刷新操作",
+    "related": [
+      "infiniteLoading",
+      "cell"
+    ],
+    "commonPatterns": [
+      "PullRefresh + InfiniteLoading (完整列表)",
+      "PullRefresh + List"
+    ]
+  },
+  "list": {
+    "label": "虚拟列表",
+    "description": "长列表渲染优化，支持自定义布局",
+    "related": [
+      "infiniteLoading",
+      "cell",
+      "swipe"
+    ],
+    "commonPatterns": [
+      "Virtuallist + Cell",
+      "Virtuallist + InfiniteLoading"
+    ]
+  },
+  "popup": {
+    "label": "弹出层",
+    "description": "基础弹层组件，其他弹层组件基于它实现",
+    "related": [
+      "dialog",
+      "toast",
+      "notify",
+      "actionsheet",
+      "popover",
+      "tour"
+    ],
+    "commonPatterns": [
+      "Popup (通用弹层)",
+      "Popup + 自定义内容"
+    ]
+  },
+  "dialog": {
+    "label": "对话框",
+    "description": "模态对话框，用于重要操作确认",
+    "related": [
+      "popup",
+      "toast",
+      "notify"
+    ],
+    "commonPatterns": [
+      "Dialog.confirm (确认操作)",
+      "Dialog.alert (提示)",
+      "Dialog (自定义内容)"
+    ]
+  },
+  "toast": {
+    "label": "轻提示",
+    "description": "短暂的提示信息，自动消失",
+    "related": [
+      "notify",
+      "dialog"
+    ],
+    "commonPatterns": [
+      "Toast.success/fail (操作反馈)",
+      "Toast.info (提示)"
+    ]
+  },
+  "notify": {
+    "label": "通知栏",
+    "description": "顶部通知，支持多种状态",
+    "related": [
+      "toast",
+      "popup"
+    ],
+    "commonPatterns": [
+      "Notify.success (状态通知)",
+      "Notify (顶部消息)"
+    ]
+  },
+  "actionsheet": {
+    "label": "底部菜单",
+    "description": "从底部弹出的操作菜单",
+    "related": [
+      "popup",
+      "dialog"
+    ],
+    "commonPatterns": [
+      "ActionSheet (选项列表)",
+      "ActionSheet + Dialog (组合确认)"
+    ]
+  },
+  "popover": {
+    "label": "气泡弹出",
+    "description": "点击触发的小气泡弹层",
+    "related": [
+      "popup",
+      "dialog"
+    ],
+    "commonPatterns": [
+      "Popover + Button (功能引导)",
+      "Popover + Icon (操作选择)"
+    ]
+  },
+  "tour": {
+    "label": "引导向导",
+    "description": "新功能引导，高亮指定区域",
+    "related": [
+      "popup",
+      "popover",
+      "overlay"
+    ],
+    "commonPatterns": [
+      "Tour (功能引导)",
+      "Tour + Popover (混合引导)"
+    ]
+  },
+  "overlay": {
+    "label": "遮罩层",
+    "description": "半透明遮罩，常配合弹层使用",
+    "related": [
+      "popup",
+      "dialog",
+      "tour"
+    ],
+    "commonPatterns": [
+      "Overlay + Popup",
+      "Overlay + Dialog"
+    ]
+  },
+  "loading": {
+    "label": "加载状态",
+    "description": "加载中指示器",
+    "related": [
+      "dialog",
+      "button"
+    ],
+    "commonPatterns": [
+      "Loading (全屏)",
+      "Button + Loading (按钮加载)"
+    ]
+  },
+  "empty": {
+    "label": "空状态",
+    "description": "数据为空时的占位展示",
+    "related": [
+      "ellipsis",
+      "imagepreview"
+    ],
+    "commonPatterns": [
+      "Empty (无数据)",
+      "Empty + ImagePreview (无图片)"
+    ]
+  },
+  "navbar": {
+    "label": "导航栏",
+    "description": "页面顶部导航栏，支持标题、返回、操作按钮",
+    "related": [
+      "tabbar",
+      "fixednav",
+      "backtop",
+      "searchbar"
+    ],
+    "commonPatterns": [
+      "Navbar + SearchBar (搜索页)",
+      "Navbar + Tabs (分类详情页)"
+    ]
+  },
+  "tabbar": {
+    "label": "底部标签栏",
+    "description": "页面底部导航，适合多 tab 切换",
+    "related": [
+      "tabbaritem",
+      "navbar",
+      "fixednav"
+    ],
+    "commonPatterns": [
+      "TabBar + TabPane (多页面)",
+      "TabBar + Router (路由导航)"
+    ]
+  },
+  "tabbaritem": {
+    "label": "底部标签项",
+    "description": "TabBar 的单个标签",
+    "related": [
+      "tabbar",
+      "tabpane",
+      "badge"
+    ],
+    "commonPatterns": [
+      "TabBar + TabBarItem + Badge (带红点)",
+      "TabBar + Router"
+    ]
+  },
+  "tabs": {
+    "label": "标签页",
+    "description": "横向标签切换组件",
+    "related": [
+      "tabpane",
+      "navbar",
+      "sticky"
+    ],
+    "commonPatterns": [
+      "Tabs + TabPane (内容切换)",
+      "Tabs + Sticky (吸顶)"
+    ]
+  },
+  "tabpane": {
+    "label": "标签面板",
+    "description": "Tabs 的内容面板",
+    "related": [
+      "tabs",
+      "cell",
+      "list"
+    ],
+    "commonPatterns": [
+      "Tabs + TabPane + List (分类列表)",
+      "Tabs + Swipe (滑动内容)"
+    ]
+  },
+  "sidebar": {
+    "label": "侧边导航",
+    "description": "左侧分类导航，适合筛选+列表场景",
+    "related": [
+      "sidebaritem",
+      "cell",
+      "tabpane"
+    ],
+    "commonPatterns": [
+      "Sidebar + Cell (分类列表)",
+      "Sidebar + Tabs (混合导航)"
+    ]
+  },
+  "sidebaritem": {
+    "label": "侧边导航项",
+    "description": "Sidebar 的单个选项",
+    "related": [
+      "sidebar",
+      "badge"
+    ],
+    "commonPatterns": [
+      "Sidebar + SidebarItem + Badge (带数量)"
+    ]
+  },
+  "fixednav": {
+    "label": "悬浮导航",
+    "description": "固定位置的导航按钮",
+    "related": [
+      "navbar",
+      "tabbar",
+      "backtop"
+    ],
+    "commonPatterns": [
+      "FixedNav + BackTop (快捷导航)",
+      "FixedNav + NavBar"
+    ]
+  },
+  "backtop": {
+    "label": "返回顶部",
+    "description": "滚动后出现，点击返回页面顶部",
+    "related": [
+      "fixednav",
+      "navbar"
+    ],
+    "commonPatterns": [
+      "BackTop + FixedNav (快捷导航)",
+      "BackTop + InfiniteLoading"
+    ]
+  },
+  "elevator": {
+    "label": "电梯导航",
+    "description": "字母索引定位，常用于城市/通讯录选择",
+    "related": [
+      "cell",
+      "sidebar",
+      "cascader"
+    ],
+    "commonPatterns": [
+      "Elevator (城市选择)",
+      "Elevator + Cell (通讯录)"
+    ]
+  },
+  "avatar": {
+    "label": "头像",
+    "description": "用户头像/图标展示",
+    "related": [
+      "avatargroup",
+      "badge",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Avatar + Badge (带数字)",
+      "AvatarGroup (头像组)"
+    ]
+  },
+  "avatargroup": {
+    "label": "头像组",
+    "description": "多个头像堆叠展示",
+    "related": [
+      "avatar",
+      "badge"
+    ],
+    "commonPatterns": [
+      "AvatarGroup + Avatar + Badge"
+    ]
+  },
+  "badge": {
+    "label": "徽标",
+    "description": "右上角红色数字/小点提示",
+    "related": [
+      "cell",
+      "tabbaritem",
+      "avatar",
+      "avatargroup"
+    ],
+    "commonPatterns": [
+      "Badge + TabBar (导航红点)",
+      "Badge + Cell (状态)",
+      "Badge + Avatar"
+    ]
+  },
+  "tag": {
+    "label": "标签",
+    "description": "短文本标签，用于状态/分类",
+    "related": [
+      "cell",
+      "badge",
+      "ellipsis"
+    ],
+    "commonPatterns": [
+      "Cell + Tag (状态标签)",
+      "Tag + Ellipsis (省略+标签)"
+    ]
+  },
+  "progress": {
+    "label": "进度条",
+    "description": "线性和圆形进度展示",
+    "related": [
+      "cell",
+      "steps",
+      "circleprogress"
+    ],
+    "commonPatterns": [
+      "Progress (线性)",
+      "CircleProgress (圆形)",
+      "Cell + Progress"
+    ]
+  },
+  "circleprogress": {
+    "label": "圆形进度",
+    "description": "圆形进度环，适合比例展示",
+    "related": [
+      "progress",
+      "countdown"
+    ],
+    "commonPatterns": [
+      "CircleProgress + Price (金额进度)"
+    ]
+  },
+  "countdown": {
+    "label": "倒计时",
+    "description": "Countdown 倒计时，支持毫秒精度",
+    "related": [
+      "countup",
+      "circleprogress",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Countdown (限时活动)",
+      "Countdown + CountUp (数据展示)"
+    ]
+  },
+  "countup": {
+    "label": "数字滚动",
+    "description": "数字滚动动画，增强数字展示效果",
+    "related": [
+      "countdown",
+      "price"
+    ],
+    "commonPatterns": [
+      "CountUp (数字动画)",
+      "Price + CountUp (价格动画)"
+    ]
+  },
+  "price": {
+    "label": "价格展示",
+    "description": "价格格式化，支持小数和单位",
+    "related": [
+      "countup",
+      "countdown",
+      "tag"
+    ],
+    "commonPatterns": [
+      "Price (价格展示)",
+      "Price + CountUp (价格动画)"
+    ]
+  },
+  "ellipsis": {
+    "label": "文本省略",
+    "description": "多行文本省略，支持展开/收起",
+    "related": [
+      "tag",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Ellipsis + Tag",
+      "Cell + Ellipsis (长文本)"
+    ]
+  },
+  "skeleton": {
+    "label": "骨架屏",
+    "description": "内容加载占位，提升感知体验",
+    "related": [
+      "loading",
+      "empty"
+    ],
+    "commonPatterns": [
+      "Skeleton (骨架屏)",
+      "Skeleton + Image (图片占位)"
+    ]
+  },
+  "swiper": {
+    "label": "轮播图",
+    "description": "图片/内容轮播组件",
+    "related": [
+      "swiperitem",
+      "indicator",
+      "imagepreview"
+    ],
+    "commonPatterns": [
+      "Swiper + SwiperItem + Indicator",
+      "Swiper + ImagePreview"
+    ]
+  },
+  "swiperitem": {
+    "label": "轮播项",
+    "description": "Swiper 的内容项",
+    "related": [
+      "swiper",
+      "indicator",
+      "image"
+    ],
+    "commonPatterns": [
+      "Swiper + SwiperItem"
+    ]
+  },
+  "indicator": {
+    "label": "指示器",
+    "description": "点状/数字指示器",
+    "related": [
+      "swiper",
+      "swiperitem",
+      "pagination"
+    ],
+    "commonPatterns": [
+      "Indicator + Swiper (轮播指示)",
+      "Indicator + Tabs"
+    ]
+  },
+  "imagepreview": {
+    "label": "图片预览",
+    "description": "图片大图预览，支持缩放和滑动",
+    "related": [
+      "swiper",
+      "empty",
+      "uploader"
+    ],
+    "commonPatterns": [
+      "ImagePreview + Swiper (图片详情)",
+      "ImagePreview + Empty (无图)"
+    ]
+  },
+  "table": {
+    "label": "表格",
+    "description": "数据表格，支持排序和筛选",
+    "related": [
+      "cell",
+      "pagination",
+      "infiniteLoading"
+    ],
+    "commonPatterns": [
+      "Table + Pagination",
+      "Table + Cell (行操作)"
+    ]
+  },
+  "pagination": {
+    "label": "分页器",
+    "description": "页码导航，适合长列表",
+    "related": [
+      "table",
+      "infiniteLoading"
+    ],
+    "commonPatterns": [
+      "Pagination (分页)",
+      "Pagination + Table/List"
+    ]
+  },
+  "collapse": {
+    "label": "折叠面板",
+    "description": "可折叠的内容区域",
+    "related": [
+      "collapseitem",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Collapse + CollapseItem (手风琴)",
+      "Collapse + Cell (FAQ)"
+    ]
+  },
+  "collapseitem": {
+    "label": "折叠项",
+    "description": "Collapse 的单个折叠项",
+    "related": [
+      "collapse",
+      "cell"
+    ],
+    "commonPatterns": [
+      "CollapseItem + Cell"
+    ]
+  },
+  "steps": {
+    "label": "步骤条",
+    "description": "流程步骤展示",
+    "related": [
+      "step",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Steps + Step (流程页)",
+      "Steps + Cell (状态流)"
+    ]
+  },
+  "step": {
+    "label": "步骤",
+    "description": "Steps 的单个步骤",
+    "related": [
+      "steps"
+    ],
+    "commonPatterns": [
+      "Step + Steps"
+    ]
+  },
+  "noticebar": {
+    "label": "通知栏",
+    "description": "横向滚动通知，用于公告/提示",
+    "related": [
+      "tag",
+      "ellipsis"
+    ],
+    "commonPatterns": [
+      "NoticeBar (公告)",
+      "NoticeBar + Tag (状态)"
+    ]
+  },
+  "trendarrow": {
+    "label": "趋势箭头",
+    "description": "涨跌状态展示，配合数字使用",
+    "related": [
+      "price",
+      "countup",
+      "tag"
+    ],
+    "commonPatterns": [
+      "TrendArrow + Price",
+      "TrendArrow + CountUp"
+    ]
+  },
+  "watermark": {
+    "label": "水印",
+    "description": "页面/元素水印，防止截图",
+    "related": [
+      "empty"
+    ],
+    "commonPatterns": [
+      "Watermark (防盗)",
+      "Watermark + Empty"
+    ]
+  },
+  "virtuallist": {
+    "label": "虚拟列表",
+    "description": "大数据量列表渲染优化",
+    "related": [
+      "cell",
+      "infiniteLoading",
+      "swipe"
+    ],
+    "commonPatterns": [
+      "Virtuallist + Cell",
+      "Virtuallist + InfiniteLoading"
+    ]
+  },
+  "drag": {
+    "label": "拖拽排序",
+    "description": "列表拖拽排序",
+    "related": [
+      "cell",
+      "swipe"
+    ],
+    "commonPatterns": [
+      "Drag + Cell (拖拽列表)",
+      "Drag + Swipe"
+    ]
+  },
+  "resultpage": {
+    "label": "结果页",
+    "description": "操作结果展示页面",
+    "related": [
+      "button",
+      "empty",
+      "dialog"
+    ],
+    "commonPatterns": [
+      "ResultPage (结果页)",
+      "ResultPage + Button (操作)"
+    ]
+  },
+  "row": {
+    "label": "行",
+    "description": "Flex 布局行，配合 Col 使用",
+    "related": [
+      "col",
+      "space",
+      "grid"
+    ],
+    "commonPatterns": [
+      "Row + Col (栅格)",
+      "Row + Space (间距)"
+    ]
+  },
+  "col": {
+    "label": "列",
+    "description": "Flex 布局列，配合 Row 使用",
+    "related": [
+      "row",
+      "space",
+      "griditem"
+    ],
+    "commonPatterns": [
+      "Col + Row (栅格)",
+      "Col + Col (多列布局)"
+    ]
+  },
+  "grid": {
+    "label": "网格",
+    "description": "宫格布局，适合图标+文字组合",
+    "related": [
+      "griditem",
+      "badge",
+      "icon"
+    ],
+    "commonPatterns": [
+      "Grid + GridItem (功能入口)",
+      "Grid + Badge (带数字)"
+    ]
+  },
+  "griditem": {
+    "label": "网格项",
+    "description": "Grid 的单个格子",
+    "related": [
+      "grid",
+      "badge",
+      "icon"
+    ],
+    "commonPatterns": [
+      "GridItem + Grid"
+    ]
+  },
+  "space": {
+    "label": "间距",
+    "description": "组件间距管理，自动设置间距",
+    "related": [
+      "row",
+      "col",
+      "divider"
+    ],
+    "commonPatterns": [
+      "Space + Row/Col",
+      "Space + Divider (分隔)"
+    ]
+  },
+  "divider": {
+    "label": "分割线",
+    "description": "内容分隔，支持水平/垂直",
+    "related": [
+      "space",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Divider + Cell (列表分隔)",
+      "Divider + Space (间距)"
+    ]
+  },
+  "sticky": {
+    "label": "吸顶",
+    "description": "滚动时固定在顶部",
+    "related": [
+      "tabs",
+      "navbar"
+    ],
+    "commonPatterns": [
+      "Sticky + Tabs (分类吸顶)",
+      "Sticky + NavBar"
+    ]
+  },
+  "safearea": {
+    "label": "安全区",
+    "description": "适配 iPhone X 等刘海屏",
+    "related": [
+      "fixednav",
+      "tabbar"
+    ],
+    "commonPatterns": [
+      "SafeArea + FixedNav",
+      "SafeArea + TabBar"
+    ]
+  },
+  "layout": {
+    "label": "布局",
+    "description": "Layout 布局容器，配合 Header/Sider/Footer",
+    "related": [
+      "row",
+      "col"
+    ],
+    "commonPatterns": [
+      "Layout + Header + Content + Footer"
+    ]
+  },
+  "image": {
+    "label": "图片",
+    "description": "图片展示，支持懒加载/占位/圆角",
+    "related": [
+      "imagepreview",
+      "avatar",
+      "skeleton"
+    ],
+    "commonPatterns": [
+      "Image + ImagePreview",
+      "Image + Skeleton"
+    ]
+  },
+  "audio": {
+    "label": "音频播放",
+    "description": "音频播放器，支持多种样式",
+    "related": [
+      "video",
+      "barrage"
+    ],
+    "commonPatterns": [
+      "Audio (语音)",
+      "Audio + Barrage (弹幕)"
+    ]
+  },
+  "video": {
+    "label": "视频播放",
+    "description": "视频播放器，支持控制栏",
+    "related": [
+      "audio",
+      "barrage",
+      "swiper"
+    ],
+    "commonPatterns": [
+      "Video (视频)",
+      "Video + Swiper (推荐视频)"
+    ]
+  },
+  "barrage": {
+    "label": "弹幕",
+    "description": "视频/音频弹幕效果",
+    "related": [
+      "video",
+      "audio",
+      "list"
+    ],
+    "commonPatterns": [
+      "Barrage + Video",
+      "Barrage + Audio"
+    ]
+  },
+  "animate": {
+    "label": "动画",
+    "description": "CSS 动画组件，支持多种动画效果",
+    "related": [
+      "audio",
+      "video"
+    ],
+    "commonPatterns": [
+      "Animate (动画)",
+      "Animate + ImagePreview"
+    ]
+  },
+  "lottie": {
+    "label": "Lottie 动画",
+    "description": "Lottie json 动画播放",
+    "related": [
+      "animate",
+      "empty"
+    ],
+    "commonPatterns": [
+      "Lottie (Lottie动画)",
+      "Lottie + Empty"
+    ]
+  },
+  "configprovider": {
+    "label": "全局配置",
+    "description": "NutUI 全局主题配置",
+    "related": [
+      "button",
+      "cell",
+      "dialog"
+    ],
+    "commonPatterns": [
+      "ConfigProvider (主题)",
+      "ConfigProvider + Button/Dialog"
+    ]
+  },
+  "icon": {
+    "label": "图标",
+    "description": "NutUI 内置图标库",
+    "related": [
+      "button",
+      "cell",
+      "grid",
+      "avatar"
+    ],
+    "commonPatterns": [
+      "Icon + Button",
+      "Icon + Cell",
+      "Icon + Grid"
+    ]
+  },
+  "calendar": {
+    "label": "日历",
+    "description": "日历组件，支持日期选择和范围选择",
+    "related": [
+      "datepicker",
+      "calendarcard",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Calendar (日历查看)",
+      "Calendar + DatePicker (日期范围)"
+    ]
+  },
+  "calendarcard": {
+    "label": "日历卡片",
+    "description": "日历卡片组件，月历视图",
+    "related": [
+      "calendar",
+      "datepicker"
+    ],
+    "commonPatterns": [
+      "CalendarCard (月历)",
+      "CalendarCard + DatePicker"
+    ]
+  },
+  "menu": {
+    "label": "菜单",
+    "description": " dropdown 下拉菜单",
+    "related": [
+      "menuitem",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Menu + MenuItem (下拉)",
+      "Menu + Cell (设置)"
+    ]
+  },
+  "menuitem": {
+    "label": "菜单项",
+    "description": "Menu 的下拉项",
+    "related": [
+      "menu",
+      "cell"
+    ],
+    "commonPatterns": [
+      "MenuItem + Menu"
+    ]
+  },
+  "numberkeyboard": {
+    "label": "数字键盘",
+    "description": "自定义数字键盘，配合输入框使用",
+    "related": [
+      "input",
+      "inputnumber",
+      "popup"
+    ],
+    "commonPatterns": [
+      "NumberKeyboard + Input",
+      "NumberKeyboard + Popup"
+    ]
+  },
+  "shortpassword": {
+    "label": "短密码",
+    "description": "短密码输入框，用于支付密码等",
+    "related": [
+      "input",
+      "popup",
+      "numberkeyboard"
+    ],
+    "commonPatterns": [
+      "ShortPassword + Popup",
+      "ShortPassword + NumberKeyboard"
+    ]
+  },
+  "signature": {
+    "label": "签名板",
+    "description": "手写签名组件",
+    "related": [
+      "popup",
+      "uploader"
+    ],
+    "commonPatterns": [
+      "Signature + Popup",
+      "Signature + Uploader"
+    ]
+  },
+  "range": {
+    "label": "范围选择",
+    "description": "双滑块范围选择",
+    "related": [
+      "form",
+      "formitem",
+      "cell"
+    ],
+    "commonPatterns": [
+      "Range + Cell",
+      "Form + FormItem + Range"
+    ]
+  },
+  "pickerview": {
+    "label": "选择器视图",
+    "description": "Picker 选择器的内容视图，非弹层模式",
+    "related": [
+      "picker",
+      "datepicker"
+    ],
+    "commonPatterns": [
+      "PickerView (嵌入式)",
+      "PickerView + Picker (弹层)"
+    ]
+  },
+  "datepickerview": {
+    "label": "日期选择视图",
+    "description": "DatePicker 的嵌入式视图",
+    "related": [
+      "datepicker",
+      "pickerview"
+    ],
+    "commonPatterns": [
+      "DatePickerView + DatePicker",
+      "DatePickerView + Calendar"
+    ]
+  }
+}

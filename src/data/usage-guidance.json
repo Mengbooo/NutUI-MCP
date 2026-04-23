@@ -1,0 +1,14 @@
+{
+  "address": "基础用法需要 visible + existList，可通过 onExistSelect 监听选择。",
+  "animate": "必需 type + action + loop + onClick，loop=true 为循环动画。",
+  "actionsheet": "必需 visible + options + onCancel + onSelect，description 可选。",
+  "audio": "必需 src + type，autoPlay+loop 控制播放行为。",
+  "avatar": "src（图片）或 icon/children（图标/文字）二选一，size 控制大小。",
+  "badge": "必需 value + children，dot=true 时 value 失效。",
+  "barrage": "必需 list + interval + duration + rows，loop 控制循环。",
+  "button": "children 为按钮文字，color 控制颜色，loading 控制加载状态。",
+  "calendar": "popup 模式需要 visible + onConfirm + onClose，range 模式需要 type=\"range\"。",
+  "cell": "基础用法只需 title，可选 description/extra 添加说明和右侧内容，clickable 控制点击反馈。",
+  "cascader": "基础用法只需 options + onChange；弹窗模式需 visible + onChange，options 为树形配置数据。",
+  "picker": "基础用法需 options + onConfirm + onCancel，visible 控制显示隐藏；options 为列数据。"
+}
